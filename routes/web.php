@@ -36,3 +36,11 @@ Route::get('/profile', function() {
 Route::get('/order', function() {
     return view('mitra.order');
 });
+
+Route::get('/notification', function() {
+    return view('mitra.notifikasi');
+});
+
+Route::get('/history', function() {
+    return view('mitra.history');
+});
