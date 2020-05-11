@@ -9,7 +9,7 @@
 
 <div class="row justify-content-center mt-3">
     <form>
-        <label>Login / <a href="">Sign Up</a></label>
+        <label>Login / <a href="{{ url('/mitra/register') }}">Sign Up</a></label>
         <div class="form-group mt-2">
             <input class="form-control form-control-lg" type="text" placeholder=" Masukkan Email" style="border-radius: 50px">
         </div>
