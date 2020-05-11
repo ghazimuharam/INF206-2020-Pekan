@@ -17,22 +17,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function() {
+Route::get('/mitra/login', function() {
     return view('mitra.login');
 });
 
-Route::get('/register', function() {
+Route::get('/mitra/register', function() {
     return view('mitra.register');
 });
 
-Route::get('/opsiPasar', function() {
+Route::get('/mitra/marketOptions', function() {
     return view('mitra.opsiPasar');
 });
 
-Route::get('/profile', function() {
+Route::get('/mitra/profile', function() {
     return view('mitra.profil');
 });
 
-Route::get('/order', function() {
+Route::get('/mitra/order', function() {
     return view('mitra.order');
+});
+
+Route::get('/buyer/marketOptions', function() {
+    return view('pembeli.opsiPasar');
 });
