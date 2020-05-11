@@ -11,10 +11,10 @@
     <form>
         <label>Login / <a href="">Sign Up</a></label>
         <div class="form-group mt-2">
-            <input class="form-control form-control-lg" type="text" placeholder="Email" style="border-radius: 50px">
+            <input class="form-control form-control-lg" type="text" placeholder=" Masukkan Email" style="border-radius: 50px">
         </div>
         <div class="form-group">
-            <input class="form-control form-control-lg" type="password" placeholder="Password" style="border-radius: 50px">
+            <input class="form-control form-control-lg" type="password" placeholder="Masukkan Password" style="border-radius: 50px">
         </div>
 
         <button type="submit" class="btn btn-dark btn-block my-4">LOGIN</button>
