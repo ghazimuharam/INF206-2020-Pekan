@@ -9,28 +9,28 @@
         <label>Sign Up</label>
         <form>
             <div class="form-group mt-2">
-                <input class="form-control form-control-lg" type="text" placeholder="Nama Lengkap" style="border-radius: 50px">
+                <input class="form-control form-control-lg" type="text" name="nama" placeholder="Nama Lengkap" style="border-radius: 50px">
             </div>
             <div class="form-group mt-2">
-                <input class="form-control form-control-lg" type="text" placeholder="Nomor HP" style="border-radius: 50px">
+                <input class="form-control form-control-lg" type="text" name="no_hp" placeholder="Nomor HP" style="border-radius: 50px">
             </div>
             <div class="form-group mt-2">
-                <input class="form-control form-control-lg" type="text" placeholder="Nama Pasar" style="border-radius: 50px">
+                <input class="form-control form-control-lg" type="text" name="nama_pasar" placeholder="Nama Pasar" style="border-radius: 50px">
             </div>
             <div class="form-group mt-2">
-                <input class="form-control form-control-lg" type="text" placeholder="Merk Kendaraan" style="border-radius: 50px">
+                <input class="form-control form-control-lg" type="text" name="merk" placeholder="Merk Kendaraan" style="border-radius: 50px">
             </div>
     </div>
     <div class="col-sm-5">
         <label>&nbsp;</label>
         <div class="form-group mt-2">
-            <input class="form-control form-control-lg" type="text" placeholder="No Plat" style="border-radius: 50px">
+            <input class="form-control form-control-lg" type="text" name="plat" placeholder="No Plat" style="border-radius: 50px">
         </div>
         <div class="form-group mt-2">
-            <input class="form-control form-control-lg" type="text" placeholder="Email" style="border-radius: 50px">
+            <input class="form-control form-control-lg" type="text" name="email" placeholder="Email" style="border-radius: 50px">
         </div>
         <div class="form-group">
-            <input class="form-control form-control-lg" type="password" placeholder="Password" style="border-radius: 50px">
+            <input class="form-control form-control-lg" type="password" name="password" placeholder="Password" style="border-radius: 50px">
         </div>
     </div>
 </div>
