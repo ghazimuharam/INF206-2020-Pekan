@@ -36,14 +36,14 @@
             </div>
         </nav>
         <div class="row justify-content-center">
-            <img src="{{ url('keranjang.png') }}" width="18%" height="18%">
+            <img src="{{ url('keranjang.png') }}" width="15%" height="15%">
             <span>
                 <div class="col-lg">
                     <div class="d-none d-lg-block">
-                        <h1 class="mt-5">PEKAN</h1>
+                        <h2 class="mt-5">PEKAN</h2>
                     </div>
                     <div class="d-none d-block d-lg-none">
-                        <h1>PEKAN</h1>
+                        <h2>PEKAN</h2>
                     </div>
                 </div>
             </span>

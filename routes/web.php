@@ -18,5 +18,21 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function() {
-    return view('login');
+    return view('mitra.login');
+});
+
+Route::get('/register', function() {
+    return view('mitra.register');
+});
+
+Route::get('/opsiPasar', function() {
+    return view('mitra.opsiPasar');
+});
+
+Route::get('/profile', function() {
+    return view('mitra.profil');
+});
+
+Route::get('/order', function() {
+    return view('mitra.order');
 });
