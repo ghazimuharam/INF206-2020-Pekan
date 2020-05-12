@@ -41,3 +41,18 @@ Route::get('/buyer/marketOptions', function() {
     return view('pembeli.opsiPasar');
 });
 
+Route::get('/buyer/marketOrder', function() {
+    return view('pembeli.orderPasar');
+});
+
+Route::get('/stock', function() {
+    return view('mitra.stok');
+});
+
+Route::get('/history', function() {
+    return view('history');
+});
+
+Route::get('/buyer/register', function() {
+    return view('pembeli.daftar');
+});
