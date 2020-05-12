@@ -45,3 +45,11 @@ Route::get('/buyer/marketOptions', function() {
     return view('pembeli.opsiPasar');
 });
 
+Route::get('/stock', function() {
+    return view('mitra.stok');
+});
+
+Route::get('/history', function() {
+    return view('history');
+});
+
