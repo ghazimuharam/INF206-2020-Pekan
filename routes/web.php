@@ -45,6 +45,10 @@ Route::get('/buyer/marketOrder', function() {
     return view('pembeli.orderPasar');
 });
 
+Route::get('/buyer/marketOrderSayur', function() {
+    return view('pembeli.orderPasarSayur');
+});
+
 Route::get('/mitra/stock', function() {
     return view('mitra.stok');
 });
