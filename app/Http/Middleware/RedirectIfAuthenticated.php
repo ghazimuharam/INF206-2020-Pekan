@@ -18,8 +18,12 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect(RouteServiceProvider::HOME);
+        if (Auth::guard('admin')->check()) {
+            return redirect(route('mitraprofile'));
+        }else if (Auth::guard('mitra')->check()) {
+            return redirect(route('mitraprofile'));
+        }else if (Auth::check()) {
+            return redirect(route('mitraprofile'));
         }
 
         return $next($request);

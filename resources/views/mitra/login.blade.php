@@ -11,8 +11,14 @@
     <form action="{{ route('mitralogin') }}" method="POST">
         @csrf
         <label>Login / <a href="{{ route('mitraregis') }}">Sign Up</a></label>
+        @if(session('info'))
+            <div class="text-danger">{{ session('info') }}</div>
+        @endif
+        @if(session('success'))
+            <div class="text-success">{{ session('success') }}</div>
+        @endif
         <div class="form-group mt-2">
-            <input class="form-control form-control-lg" type="text" name="email" placeholder="Masukkan Email" style="border-radius: 50px">
+            <input class="form-control form-control-lg" type="text" name="email" placeholder="Masukkan Email" style="border-radius: 50px" value="{{ old('email') }}">
         </div>
         <div class="form-group">
             <input class="form-control form-control-lg" type="password" name="password" placeholder="Masukkan Password" style="border-radius: 50px">
