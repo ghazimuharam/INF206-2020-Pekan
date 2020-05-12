@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/mitra/login', 'MitraController@showLogin')->name('mitralogin');
     Route::post('/mitra/login', 'MitraController@doLogin')->name('mitralogin');
@@ -23,11 +24,10 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/mitra/register', 'MitraController@store')->name('mitraregis');
 });
 
-Route::get('/mitra/marketoptions', 'MitraController@marketOptions');
+Route::get('/mitra/marketOptions', 'MitraController@marketOptions');
 Route::get('/mitra/profile', 'MitraController@index')->name('mitraprofile');
 Route::get('/mitra/logout', 'MitraController@destroy')->name('mitralogout');
 Route::get('/mitra/order', 'MitraController@showOrder');
-
 
 Route::get('/mitra/notification', function() {
     return view('mitra.notifikasi');
@@ -35,19 +35,6 @@ Route::get('/mitra/notification', function() {
 
 Route::get('/mitra/history', function() {
     return view('mitra.history');
-});
-
-Route::get('/buyer/marketOptions', function() {
-    return view('pembeli.opsiPasar');
-});
-
-Route::get('/buyer/marketOrder', function() {
-    return view('pembeli.orderPasar');
-});
-
-
-Route::get('/buyer/marketOrderSayur', function() {
-    return view('pembeli.orderPasarSayur');
 });
 
 Route::get('/mitra/stock/vegetable', function() {
@@ -58,6 +45,18 @@ Route::get('/mitra/stock/fish', function() {
     return view('mitra.stokikan');
 });
 
+Route::get('/buyer/marketOptions', function() {
+    return view('pembeli.opsiPasar');
+});
+
+Route::get('/buyer/marketOrder/fish', function() {
+    return view('pembeli.orderPasarIkan');
+});
+
+Route::get('/buyer/marketOrder/vegetable', function() {
+    return view('pembeli.orderPasarSayur');
+});
+
 Route::get('/buyer/history', function() {
     return view('pembeli.history');
 });
@@ -66,7 +65,6 @@ Route::get('/buyer/register', function() {
     return view('pembeli.daftar');
 });
 
-
 Route::get('/buyer/detail', function() {
     return view('pembeli.detail');
 });
@@ -74,4 +72,3 @@ Route::get('/buyer/detail', function() {
 Route::get('/buyer/profile', function() {
     return view('pembeli.profil');
 });
-

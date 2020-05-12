@@ -37,6 +37,7 @@
                 <a>Sudah Punya Akun Login?<a href="{{ url('/buyer/login') }}">Disini</a></a>
             </div>
         <form>
-    </div>  
+    </div>
 </div>
+
 @endsection

@@ -6,7 +6,7 @@
 
 <h2>Order History</h2>
 <h4 class="mt-4">Today :</h4>
-<div class="row">
+<div class="row my-3">
     <div class="col-sm-5">
         <div class="card" style="border-radius: 30px">
         <div class="card-body">
@@ -18,7 +18,7 @@
     </div>
 </div>
 <h4 class="mt-3">Yesterday :</h4>
-<div class="row">
+<div class="row my-3">
     <div class="col-sm-5">
         <div class="card" style="border-radius: 30px">
         <div class="card-body">
@@ -29,6 +29,5 @@
         </div>
     </div>
 </div>
-
 
 @endsection

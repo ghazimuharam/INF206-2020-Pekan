@@ -32,6 +32,7 @@
             <div class="form-group mt-2">
                 <input class="form-control form-control-lg" type="text" name="vehicle_name" placeholder="Merk Kendaraan" style="border-radius: 50px" value="{{ old('vehicle_name') }}">
             </div>
+        </form>
     </div>
     <div class="col-lg-3">
         <label>&nbsp;</label>
@@ -68,4 +69,5 @@
         <button type="submit" class="btn btn-dark my-4">SUBMIT</button>
     </form>
 </div>
+
 @endsection

@@ -26,4 +26,5 @@
         <h5>BL 231 AB</h5>
     </div>
 </div>
+
 @endsection

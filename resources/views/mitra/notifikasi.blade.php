@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h3 class="text-center">Pemesan Detail</h3>
+<h3 class="text-center my-4">Pemesan Detail</h3>
 <div class="col d-flex justify-content-center">
     <div class="card text-white bg-info mb-3" style="max-width: 30rem; border-radius: 30px">
         <div class="card-body" >
@@ -16,7 +16,9 @@
             <p class="text-center">Zubaidah</p>
             <p class="text-center">+62-821-3574-7838</p>
             <p class="text-center">Jl.Anggrek</p>
+        </div>
     </div>
 </div>
+
 @endsection
 
