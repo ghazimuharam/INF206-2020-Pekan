@@ -45,12 +45,17 @@ Route::get('/buyer/marketOrder', function() {
     return view('pembeli.orderPasar');
 });
 
+
 Route::get('/buyer/marketOrderSayur', function() {
     return view('pembeli.orderPasarSayur');
 });
 
-Route::get('/mitra/stock', function() {
-    return view('mitra.stok');
+Route::get('/mitra/stock/vegetable', function() {
+    return view('mitra.stoksayur');
+});
+
+Route::get('/mitra/stock/fish', function() {
+    return view('mitra.stokikan');
 });
 
 Route::get('/buyer/history', function() {
@@ -61,6 +66,12 @@ Route::get('/buyer/register', function() {
     return view('pembeli.daftar');
 });
 
+
+Route::get('/buyer/detail', function() {
+    return view('pembeli.detail');
+});
+
 Route::get('/buyer/profile', function() {
     return view('pembeli.profil');
 });
+
