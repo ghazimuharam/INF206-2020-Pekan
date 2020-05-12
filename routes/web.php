@@ -33,6 +33,16 @@ Route::get('/mitra/order', function() {
     return view('mitra.order');
 });
 
+
+Route::get('/notification', function() {
+    return view('mitra.notifikasi');
+});
+
+Route::get('/history', function() {
+    return view('mitra.history');
+});
+
 Route::get('/buyer/marketOptions', function() {
     return view('pembeli.opsiPasar');
 });
+
