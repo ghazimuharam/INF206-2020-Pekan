@@ -57,6 +57,12 @@ Route::get('/buyer/register', function() {
     return view('pembeli.daftar');
 });
 
+
+Route::get('/buyer/detail', function() {
+    return view('pembeli.detail');
+});
+
 Route::get('/buyer/profile', function() {
     return view('pembeli.profil');
 });
+
