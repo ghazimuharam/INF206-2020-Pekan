@@ -53,3 +53,6 @@ Route::get('/history', function() {
     return view('history');
 });
 
+Route::get('/buyer/register', function() {
+    return view('pembeli.daftar');
+});
