@@ -1,10 +1,10 @@
 @extends('layout.main')
 
-@section('title', 'Opsi Pasar')
+@section('title', 'Notifikasi')
 
 @section('content')
 
-<h3 class="text-center">Pemesan Detail :</h3>
+<h3 class="text-center">Pemesan Detail</h3>
 <div class="col d-flex justify-content-center">
     <div class="card text-white bg-info mb-3" style="max-width: 30rem; border-radius: 30px">
         <div class="card-body" >
