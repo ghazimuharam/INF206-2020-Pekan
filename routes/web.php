@@ -40,3 +40,11 @@ Route::get('/mitra/order', function() {
 Route::get('/buyer/marketOptions', function() {
     return view('pembeli.opsiPasar');
 });
+
+Route::get('/buyer/marketOrder', function() {
+    return view('pembeli.orderPasar');
+});
+
+Route::get('/buyer/marketOrder1', function() {
+    return view('pembeli.orderPasar1');
+});
