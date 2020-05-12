@@ -17,24 +17,32 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function() {
-    return view('mitra.login');
-});
+Route::get('/mitra/login', 'MitraController@showLogin')->name('mitralogin');
+Route::post('/mitra/login', 'MitraController@doLogin')->name('mitralogin');
+Route::get('/mitra/register', 'MitraController@create')->name('mitraregis');
+Route::post('/mitra/register', 'MitraController@store')->name('mitraregis');
 
-Route::get('/register', function() {
-    return view('mitra.register');
-});
-
-Route::get('/opsiPasar', function() {
+Route::get('/mitra/marketOptions', function() {
     return view('mitra.opsiPasar');
 });
 
-Route::get('/profile', function() {
-    return view('mitra.profil');
+Route::get('/mitra/profile', 'MitraController@index')->name('mitraprofil');
+
+Route::get('/mitra/order', function() {
+    return view('mitra.order');
 });
 
-Route::get('/order', function() {
-    return view('mitra.order');
+
+Route::get('/notification', function() {
+    return view('mitra.notifikasi');
+});
+
+Route::get('/history', function() {
+    return view('mitra.history');
+});
+
+Route::get('/buyer/marketOptions', function() {
+    return view('pembeli.opsiPasar');
 });
 
 Route::get('/stock', function() {
@@ -44,3 +52,4 @@ Route::get('/stock', function() {
 Route::get('/history', function() {
     return view('history');
 });
+
