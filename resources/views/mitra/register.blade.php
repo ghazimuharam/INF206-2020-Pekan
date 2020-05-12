@@ -15,25 +15,26 @@
         </div>
     </div>
     <div class="col-sm-5">
-        <label><a href="{{ url('/mitra/login') }}">Login</a> / Sign Up</label>
-        <form>
+        <label><a href="{{ route('mitralogin') }}">Login</a> / Sign Up</label>
+        <form action="{{ route('mitraregis') }}" method="POST">
+            @csrf
             <div class="form-group mt-2">
-                <input class="form-control form-control-lg" type="text" name="nama" placeholder="Nama Lengkap" style="border-radius: 50px">
+                <input class="form-control form-control-lg" type="text" name="name" placeholder="Nama Lengkap" style="border-radius: 50px">
             </div>
             <div class="form-group mt-2">
-                <input class="form-control form-control-lg" type="text" name="no_hp" placeholder="Nomor HP" style="border-radius: 50px">
+                <input class="form-control form-control-lg" type="text" name="phone" placeholder="Nomor HP" style="border-radius: 50px">
             </div>
             <div class="form-group mt-2">
-                <input class="form-control form-control-lg" type="text" name="nama_pasar" placeholder="Nama Pasar" style="border-radius: 50px">
+                <input class="form-control form-control-lg" type="text" name="market_name" placeholder="Nama Pasar" style="border-radius: 50px">
             </div>
             <div class="form-group mt-2">
-                <input class="form-control form-control-lg" type="text" name="merk" placeholder="Merk Kendaraan" style="border-radius: 50px">
+                <input class="form-control form-control-lg" type="text" name="vehicle_name" placeholder="Merk Kendaraan" style="border-radius: 50px">
             </div>
     </div>
     <div class="col-sm-5">
         <label>&nbsp;</label>
         <div class="form-group mt-2">
-            <input class="form-control form-control-lg" type="text" name="plat" placeholder="No Plat" style="border-radius: 50px">
+            <input class="form-control form-control-lg" type="text" name="vrn" placeholder="No Plat" style="border-radius: 50px">
         </div>
         <div class="form-group mt-2">
             <input class="form-control form-control-lg" type="text" name="email" placeholder="Email" style="border-radius: 50px">
