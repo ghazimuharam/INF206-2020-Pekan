@@ -17,21 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/mitra/login', function() {
-    return view('mitra.login');
-});
-
-Route::get('/mitra/register', function() {
-    return view('mitra.register');
-});
+Route::get('/mitra/login', 'MitraController@showLogin')->name('mitralogin');
+Route::post('/mitra/login', 'MitraController@doLogin')->name('mitralogin');
+Route::get('/mitra/register', 'MitraController@create')->name('mitraregis');
+Route::post('/mitra/register', 'MitraController@store')->name('mitraregis');
 
 Route::get('/mitra/marketOptions', function() {
     return view('mitra.opsiPasar');
 });
 
-Route::get('/mitra/profile', function() {
-    return view('mitra.profil');
-});
+Route::get('/mitra/profile', 'MitraController@index')->name('mitraprofil');
 
 Route::get('/mitra/order', function() {
     return view('mitra.order');

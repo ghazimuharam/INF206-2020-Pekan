@@ -8,8 +8,9 @@
 </div>
 
 <div class="row justify-content-center mt-3">
-    <form>
-        <label>Login / <a href="{{ url('/mitra/register') }}">Sign Up</a></label>
+    <form action="{{ route('mitralogin') }}" method="POST">
+        @csrf
+        <label>Login / <a href="{{ route('mitraregis') }}">Sign Up</a></label>
         <div class="form-group mt-2">
             <input class="form-control form-control-lg" type="text" name="email" placeholder="Masukkan Email" style="border-radius: 50px">
         </div>
