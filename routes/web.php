@@ -16,21 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/mitra/login', 'MitraController@showLogin')->name('mitralogin');
-Route::post('/mitra/login', 'MitraController@doLogin')->name('mitralogin');
-Route::get('/mitra/register', 'MitraController@create')->name('mitraregis');
-Route::post('/mitra/register', 'MitraController@store')->name('mitraregis');
-
-Route::get('/mitra/marketOptions', function() {
-    return view('mitra.opsiPasar');
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/mitra/login', 'MitraController@showLogin')->name('mitralogin');
+    Route::post('/mitra/login', 'MitraController@doLogin')->name('mitralogin');
+    Route::get('/mitra/register', 'MitraController@create')->name('mitraregis');
+    Route::post('/mitra/register', 'MitraController@store')->name('mitraregis');
 });
 
-Route::get('/mitra/profile', 'MitraController@index')->name('mitraprofil');
-
-Route::get('/mitra/order', function() {
-    return view('mitra.order');
-});
+Route::get('/mitra/marketoptions', 'MitraController@marketOptions');
+Route::get('/mitra/profile', 'MitraController@index')->name('mitraprofile');
+Route::get('/mitra/logout', 'MitraController@destroy')->name('mitralogout');
+Route::get('/mitra/order', 'MitraController@showOrder');
 
 
 Route::get('/notification', function() {

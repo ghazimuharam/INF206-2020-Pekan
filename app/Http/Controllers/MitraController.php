@@ -9,31 +9,21 @@ use App\User;
 
 class MitraController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function __construct()
     {
-        return Auth::logout();
+        $this->middleware('mitra', ['only' => ['index', 'marketOptions', 'destroy', 'showOrder']]);
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function index()
+    {
+        return Auth::guard('mitra')->user();
+    }
+
     public function showLogin()
     {
         return view('mitra.login');
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function doLogin(Request $request)
     {
         $request->validate([
@@ -41,39 +31,29 @@ class MitraController extends Controller
             'password' => 'required',
         ]);
 
-        if(Auth::attempt(['email' => $request->email, 'password' => $request->password, 'mitra_status' => 'active', 'roles_id' => '2'])){
-            return redirect(route('mitraprofil'));
+        if(Auth::guard('mitra')->attempt(['email' => $request->email, 'password' => $request->password, 'mitra_status' => 'active', 'roles_id' => '2'])){
+            return redirect(route('mitraprofile'));
         }
         else
         {
-            return redirect(route('mitralogin'))->with('info', 'Email atau password salah.');
+            return redirect(route('mitralogin'))->with('info', 'Email password salah atau akun belum aktif.')->withInput();
         }
     }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('mitra.register');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $request->validate([
             'name' => 'required',
-            'phone' => 'required',
-            'market_name' => 'required',
+            'phone' => 'required|numeric|unique:users',
+            'market_name' => 'required|unique:users',
             'vehicle_name' => 'required',
-            'vrn' => 'required',
-            'email' => 'required|unique:users',
+            'vrn' => 'required|unique:users',
+            'email' => 'required|unique:users|email:rfc,dns',
             'password' => 'required',
         ]);
 
@@ -90,54 +70,23 @@ class MitraController extends Controller
             ]);
 
         if($user){
-            return redirect(route('mitraprofil'));
+            return redirect(route('mitralogin'))->with('success', 'Pendaftaran berhasil,akun mitra akan di review oleh admin.');
         }else{
-            return redirect(route('mitraregis'))->with('info', 'Gagal mendaftarkan mitra baru.');
+            return redirect(route('mitraregis'))->with('info', 'Gagal mendaftarkan mitra baru.')->withInput();
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+    public function marketOptions(){
+        return view('mitra.opsiPasar');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+    public function showOrder(){
+        return view('mitra.order');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function destroy()
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        Auth::guard('mitra')->logout();
+        return redirect(route('mitralogin'));
     }
 }
