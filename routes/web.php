@@ -29,11 +29,11 @@ Route::get('/mitra/logout', 'MitraController@destroy')->name('mitralogout');
 Route::get('/mitra/order', 'MitraController@showOrder');
 
 
-Route::get('/notification', function() {
+Route::get('/mitra/notification', function() {
     return view('mitra.notifikasi');
 });
 
-Route::get('/history', function() {
+Route::get('/mitra/history', function() {
     return view('mitra.history');
 });
 
@@ -45,14 +45,18 @@ Route::get('/buyer/marketOrder', function() {
     return view('pembeli.orderPasar');
 });
 
-Route::get('/stock', function() {
+Route::get('/mitra/stock', function() {
     return view('mitra.stok');
 });
 
-Route::get('/history', function() {
-    return view('history');
+Route::get('/buyer/history', function() {
+    return view('pembeli.history');
 });
 
 Route::get('/buyer/register', function() {
     return view('pembeli.daftar');
+});
+
+Route::get('/buyer/profile', function() {
+    return view('pembeli.profil');
 });

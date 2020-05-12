@@ -3,6 +3,7 @@
 @section('title', 'Profile')
 
 @section('content')
+
 <div class="row my-5">
     <img src="">
     <h3>Syahril</h3>
