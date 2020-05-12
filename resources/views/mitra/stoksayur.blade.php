@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section('title', 'Stock of Items')
+@section('title', 'Stock of Vegetables Items')
 
 @section('content')
 
