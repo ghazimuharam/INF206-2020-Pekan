@@ -75,3 +75,4 @@ Route::get('/buyer/profile', function() {
     return view('pembeli.profil');
 });
 
+Route::get('/test', 'TestController@index');
