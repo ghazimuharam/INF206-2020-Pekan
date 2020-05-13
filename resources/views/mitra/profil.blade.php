@@ -26,4 +26,6 @@
         <h5>BL 231 AB</h5>
     </div>
 </div>
+<a href="{{route('push')}}" class="btn btn-outline-primary btn-block">Make a Push Notification!</a>
+
 @endsection

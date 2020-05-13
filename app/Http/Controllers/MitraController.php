@@ -5,18 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use App\Notifications\OrderPlaced;
 use App\User;
+use Notification;
 
 class MitraController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('mitra', ['only' => ['index', 'marketOptions', 'destroy', 'showOrder']]);
+        $this->middleware('mitra', ['only' => ['index', 'marketOptions', 'destroy', 'showOrder', 'push', 'pushpost']]);
     }
 
     public function index()
     {
-        return Auth::guard('mitra')->user();
+        return view('mitra.profil');
     }
 
     public function showLogin()
@@ -89,4 +91,25 @@ class MitraController extends Controller
         Auth::guard('mitra')->logout();
         return redirect(route('mitralogin'));
     }
+
+    public function pushpost(Request $request){
+        $this->validate($request,[
+            'endpoint'    => 'required',
+            'keys.auth'   => 'required',
+            'keys.p256dh' => 'required'
+        ]);
+        $endpoint = $request->endpoint;
+        $token = $request->keys['auth'];
+        $key = $request->keys['p256dh'];
+        $user = Auth::guard('mitra')->user();
+        $user->updatePushSubscription($endpoint, $key, $token);
+
+        return response()->json(['success' => true],200);
+    }
+
+    public function push(){
+        Notification::send(Auth::guard('mitra')->user(),new OrderPlaced(Auth::guard('mitra')->user()->name));
+        return redirect()->back();
+    }
+
 }

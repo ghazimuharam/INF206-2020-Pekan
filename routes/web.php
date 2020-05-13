@@ -70,3 +70,6 @@ Route::get('/buyer/profile', function() {
     return view('pembeli.profil');
 });
 
+Route::get('/test', 'MitraController@testNotif');
+Route::get('/user/order/push','MitraController@push')->name('push');
+Route::post('/user/order/push','MitraController@pushpost');
