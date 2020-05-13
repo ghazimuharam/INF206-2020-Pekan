@@ -26,10 +26,11 @@ class OrderPlaced extends Notification
     public function toWebPush($notifiable, $notification)
     {
         return (new WebPushMessage)
-            ->title("Order $this->nama")
+            ->title("Order Received!")
             ->icon('/notification-icon.png')
-            ->body('You received an order from !')
-            ->action('View App', 'notification_action');
+            ->body("You received an order from $this->nama!")
+            ->action('View App', 'notification_action')
+            ->vibrate([200,80,120]);
     }
 
 }
