@@ -135,4 +135,10 @@ class MitraController extends Controller
 
         return redirect()->back();
     }
+
+    public function historyOrder()
+    {
+        $users = Auth::guard('mitra') -> user()->sellerOrderHistory;
+        return view('mitra.history', ['users' => $users]);
+    }
 }
