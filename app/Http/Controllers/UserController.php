@@ -70,6 +70,7 @@ class UserController extends Controller
     }
 
     public function showProfile(){
-        return view('pembeli.profil');
+        $user = Auth::user();
+        return view('pembeli.profil',['user'=>$user]);
     }
 }
