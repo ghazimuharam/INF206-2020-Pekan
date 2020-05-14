@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Stock;
+use App\Order;
 
 class MitraController extends Controller
 {
@@ -88,5 +90,41 @@ class MitraController extends Controller
     {
         Auth::guard('mitra')->logout();
         return redirect(route('mitralogin'));
+    }
+
+    public function updateStokIkan(Request $request){
+        $request->validate([
+            'nama_barang' => 'required' , 
+        ]);
+        Stock::create([
+            'user_id' => Auth::guard('mitra')->user()->id,
+            'type_pasar' => 'ikan', 
+            'nama_barang' => $request->nama_barang,
+        ]);
+        return redirect('/mitra/stock/fish');
+    }
+
+    public function displayStokIkan(){
+        $ikan = Auth::guard('mitra') -> user() -> stock -> where('type_pasar', '=', 'ikan');
+
+        return view('mitra.stokikan', ['ikan'=>$ikan]);
+    }
+
+    public function updateStokSayur(Request $request){
+        $request->validate([
+            'nama_barang' => 'required' , 
+        ]);
+        Stock::create([
+            'user_id' => Auth::guard('mitra')->user()->id,
+            'type_pasar' => 'sayur', 
+            'nama_barang' => $request->nama_barang,
+        ]);
+        return redirect('/mitra/stock/vegetable');
+    }
+
+    public function displayStokSayur(){
+        $sayur = Auth::guard('mitra') -> user() -> stock -> where('type_pasar', '=', 'sayur');
+
+        return view('mitra.stoksayur', ['sayur'=>$sayur]);
     }
 }
