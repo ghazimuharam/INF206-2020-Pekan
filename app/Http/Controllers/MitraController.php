@@ -128,4 +128,11 @@ class MitraController extends Controller
 
         return view('mitra.stoksayur', ['sayur'=>$sayur]);
     }
+
+    public function destroyStok($id){
+        $stok = Stock::findOrFail($id);
+        $stok->delete();
+
+        return redirect()->back();
+    }
 }

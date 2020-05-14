@@ -19,7 +19,7 @@
             <div class="card-body" >
                 @foreach($sayur as $s)
                 <p>
-                    -{{$s -> nama_barang}}<br>
+                    {{$s -> nama_barang}} <a href='/mitra/stock/{{$s -> id}}/delete'> (-)</a><br>
                 </p>
                 @endforeach
             </div>

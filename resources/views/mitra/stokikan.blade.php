@@ -19,7 +19,7 @@
             <div class="card-body" >
                 @foreach($ikan as $i)
                 <p>
-                    -{{$i -> nama_barang}}<br>
+                    {{$i -> nama_barang}} <a href='/mitra/stock/{{$i -> id}}/delete'> (-)</a><br>
                 </p>
                 @endforeach
             </div>

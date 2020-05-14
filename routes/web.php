@@ -58,6 +58,7 @@ Route::get('/buyer/marketOrderSayur', function() {
 
 Route::get('/mitra/stock/vegetable', 'MitraController@displayStokSayur');
 Route::post('/mitra/stock/vegetable', 'MitraController@updateStokSayur');
+Route::get('/mitra/stock/{id}/delete', 'MitraController@destroyStok');
 
 Route::get('/mitra/stock/fish', 'MitraController@displayStokIkan');
 Route::post('/mitra/stock/fish', 'MitraController@updateStokIkan');
