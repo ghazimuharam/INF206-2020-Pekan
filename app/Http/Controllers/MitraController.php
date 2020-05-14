@@ -135,4 +135,35 @@ class MitraController extends Controller
 
         return redirect()->back();
     }
+
+     //ubahprofil
+     public function editProfile() {
+	    $user = Auth::guard('mitra')->user();
+        return view('mitra.editprofile',['user' => $user]);
+    }
+
+    public function updateProfile(Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required|numeric|unique:users',
+            'market_name' => 'required|unique:users',
+            'vehicle_name' => 'required',
+            'vrn' => 'required|unique:users',
+            'email' => 'required|unique:users|email:rfc,dns',
+            'password' => 'required',
+        ]);
+        $user=User::update([
+            'name'  => $request->name,
+            'email'  => $request->email,
+            'password'  => Hash::make($request->password),
+            'phone'  => $request->phone,
+            'market_name'  => $request->market_name,
+            'vehicle_name'  => $request->vehicle_name,
+            'vrn'  => $request->vrn,
+            'mitra_status' => 'deactive',
+            'roles_id' => '2',
+            ]);
+
+        return redirect(route('mitraprofile'));
+    }
 }

@@ -9,6 +9,12 @@ use App\User;
 
 class UserController extends Controller
 {
+    public function index()
+    {
+        $user = Auth::guard('mitra')->user();
+        return view('mitra.profil', ['user'=>$user]); 
+    }
+
     public function showLogin()
     {
         return view('pembeli.login');
