@@ -28,6 +28,12 @@ Route::get('/mitra/profile', 'MitraController@index')->name('mitraprofile');
 Route::get('/mitra/logout', 'MitraController@destroy')->name('mitralogout');
 Route::get('/mitra/order', 'MitraController@showOrder');
 
+Route::get('/pembeli/login', 'UserController@showLogin')->name('pembelilogin');
+Route::post('/pembeli/login','UserController@doLogin')->name('pembelilogin');
+Route::get('/pembeli/register', 'UserController@showRegister')->name('pembeliregis');
+Route::post('/pembeli/register','UserController@doRegister')->name('pembeliregis');
+Route::get('/pembeli/profile','UserController@showProfile')->name('pembeliprofile');
+
 
 Route::get('/mitra/notification', function() {
     return view('mitra.notifikasi');
