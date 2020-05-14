@@ -15,14 +15,14 @@
 
     <div class ="col-sm-4 mt-4">
         <div class="my-5 col-lg-20">
-            <h3>Sitty Almatunira</h3>
+            <h3>{{$user->name}}</h3>
         </div>
         <h4>Fullname</h4>
-        <h5>Sitty Almatunira</h5>
+        <h5>{{$user->name}</h5>
         <h4 class="mt-3">Mobile Number</h4>
-        <h5>082276675327</h5>
+        <h5>{{$user->phone}}</h5>
         <h4 class="mt-3">Email Address</h4>
-        <h5>almatunira@mhs.unsyiah.co.id</h5>
+        <h5>{{$user->vehicle_name}}</h5>
     </div>
 </div>
 @endsection

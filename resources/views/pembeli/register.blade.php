@@ -17,24 +17,25 @@
     </div>
     <div class="col-sm-5">
         <label> Sign Up</label>
-        <form>
+        <form action="{{ route('pembeliregis') }}" method="POST">
+            @csrf
             <div class="form-group mt-2">
-                <input class="form-control form-control-lg" type="text" name="nama" placeholder="Nama Lengkap" style="border-radius: 50px">
+                <input class="form-control form-control-lg" type="text" name="name" placeholder="Nama Lengkap" style="border-radius: 50px">
             </div>
             <div class="form-group mt-2">
-                <input class="form-control form-control-lg" type="text" name="no_hp" placeholder="Nomor HP" style="border-radius: 50px">
+                <input class="form-control form-control-lg" type="text" name="phone" placeholder="Nomor HP" style="border-radius: 50px">
             </div>
             <div class="form-group mt-2">
-                <input class="form-control form-control-lg" type="text" name="nama_pasar" placeholder="Email" style="border-radius: 50px">
+                <input class="form-control form-control-lg" type="text" name="email" placeholder="Email" style="border-radius: 50px">
             </div>
             <div class="form-group mt-2">
-                <input class="form-control form-control-lg" type="text" name="merk" placeholder="Password" style="border-radius: 50px">
+                <input class="form-control form-control-lg" type="password" name="password" placeholder="Password" style="border-radius: 50px">
             </div>
             <div class="row justify-content">
                 <button type="submit" class="btn btn-dark my-2">SUBMIT</button>
             </div>
             <div class="row justify-content my-1">
-                <a>Sudah Punya Akun Login?<a href="{{ url('/buyer/login') }}">Disini</a></a>
+                <a>Sudah Punya Akun Login?<a href="{{ route('pembelilogin') }}">Disini</a></a>
             </div>
         <form>
     </div>  

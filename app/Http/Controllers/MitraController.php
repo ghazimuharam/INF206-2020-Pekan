@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Notifications\OrderPlaced;
 use App\User;
 use Notification;
+use App\Stock;
+use App\Order;
 
 class MitraController extends Controller
 {
@@ -18,7 +20,8 @@ class MitraController extends Controller
 
     public function index()
     {
-        return view('mitra.profil');
+        $user = Auth::guard('mitra')->user();
+        return view('mitra.profil', ['user'=>$user]);
     }
 
     public function showLogin()
@@ -112,4 +115,85 @@ class MitraController extends Controller
         return redirect()->back();
     }
 
+    public function updateStokIkan(Request $request){
+        $request->validate([
+            'nama_barang' => 'required' ,
+        ]);
+        Stock::create([
+            'user_id' => Auth::guard('mitra')->user()->id,
+            'type_pasar' => 'ikan',
+            'nama_barang' => $request->nama_barang,
+        ]);
+        return redirect('/mitra/stock/fish');
+    }
+
+    public function displayStokIkan(){
+        $ikan = Auth::guard('mitra') -> user() -> stock -> where('type_pasar', '=', 'ikan');
+
+        return view('mitra.stokikan', ['ikan'=>$ikan]);
+    }
+
+    public function updateStokSayur(Request $request){
+        $request->validate([
+            'nama_barang' => 'required' ,
+        ]);
+        Stock::create([
+            'user_id' => Auth::guard('mitra')->user()->id,
+            'type_pasar' => 'sayur',
+            'nama_barang' => $request->nama_barang,
+        ]);
+        return redirect('/mitra/stock/vegetable');
+    }
+
+    public function displayStokSayur(){
+        $sayur = Auth::guard('mitra') -> user() -> stock -> where('type_pasar', '=', 'sayur');
+
+        return view('mitra.stoksayur', ['sayur'=>$sayur]);
+    }
+
+    public function destroyStok($id){
+        $stok = Stock::findOrFail($id);
+        $stok->delete();
+
+        return redirect()->back();
+    }
+
+
+     //ubahprofil
+     public function editProfile() {
+	    $user = Auth::guard('mitra')->user();
+        return view('mitra.editprofile',['user' => $user]);
+    }
+
+    public function updateProfile(Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required|numeric|unique:users',
+            'market_name' => 'required|unique:users',
+            'vehicle_name' => 'required',
+            'vrn' => 'required|unique:users',
+            'email' => 'required|unique:users|email:rfc,dns',
+            'password' => 'required',
+        ]);
+        $user=User::update([
+            'name'  => $request->name,
+            'email'  => $request->email,
+            'password'  => Hash::make($request->password),
+            'phone'  => $request->phone,
+            'market_name'  => $request->market_name,
+            'vehicle_name'  => $request->vehicle_name,
+            'vrn'  => $request->vrn,
+            'mitra_status' => 'deactive',
+            'roles_id' => '2',
+            ]);
+
+        return redirect(route('mitraprofile'));
+    }
+
+    public function historyOrder()
+    {
+        $users = Auth::guard('mitra') -> user()->sellerOrderHistory;
+        return view('mitra.history', ['users' => $users]);
+
+    }
 }

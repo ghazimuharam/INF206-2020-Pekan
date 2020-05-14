@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class Stock extends Model
 {
     protected $fillable = [
-        'name'
+        'user_id', 'type_pasar','nama_barang'
     ];
 
     public function user(){
