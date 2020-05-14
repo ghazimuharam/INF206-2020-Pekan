@@ -50,13 +50,11 @@ Route::get('/buyer/marketOrderSayur', function() {
     return view('pembeli.orderPasarSayur');
 });
 
-Route::get('/mitra/stock/vegetable', function() {
-    return view('mitra.stoksayur');
-});
+Route::get('/mitra/stock/vegetable', 'MitraController@displayStokSayur');
+Route::post('/mitra/stock/vegetable', 'MitraController@updateStokSayur');
 
-Route::get('/mitra/stock/fish', function() {
-    return view('mitra.stokikan');
-});
+Route::get('/mitra/stock/fish', 'MitraController@displayStokIkan');
+Route::post('/mitra/stock/fish', 'MitraController@updateStokIkan');
 
 Route::get('/buyer/history', function() {
     return view('pembeli.history');

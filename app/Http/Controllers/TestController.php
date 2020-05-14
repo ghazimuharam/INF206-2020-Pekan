@@ -13,4 +13,6 @@ class TestController extends Controller
     public function index(){
         return User::find(2)->stock;
     }
+
+    
 }
