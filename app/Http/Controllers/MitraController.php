@@ -18,7 +18,8 @@ class MitraController extends Controller
 
     public function index()
     {
-        return Auth::guard('mitra')->user();
+        $user = Auth::guard('mitra')->user();
+        return view('mitra.profil', ['user'=>$user]); 
     }
 
     public function showLogin()
