@@ -146,26 +146,29 @@ class MitraController extends Controller
     public function updateProfile(Request $request) {
         $request->validate([
             'name' => 'required',
-            'phone' => 'required|numeric|unique:users',
-            'market_name' => 'required|unique:users',
+            'phone' => 'required|numeric',
+            'market_name' => 'required',
             'vehicle_name' => 'required',
-            'vrn' => 'required|unique:users',
-            'email' => 'required|unique:users|email:rfc,dns',
-            'password' => 'required',
+            'vrn' => 'required',
+            'email' => 'required|email:rfc,dns',
         ]);
-        $user=User::update([
+
+        $update = Auth::guard('mitra')->user()->update([
             'name'  => $request->name,
             'email'  => $request->email,
-            'password'  => Hash::make($request->password),
             'phone'  => $request->phone,
             'market_name'  => $request->market_name,
             'vehicle_name'  => $request->vehicle_name,
             'vrn'  => $request->vrn,
-            'mitra_status' => 'deactive',
-            'roles_id' => '2',
+            'mitra_status' => Auth::guard('mitra')->user()->mitra_status,
+            'roles_id' => Auth::guard('mitra')->user()->roles_id,
             ]);
-
-        return redirect(route('mitraprofile'));
+        if($update){
+            return redirect()->back()->with('info', 'Profile updated successfully!');
+        }else{
+            return redirect()->back()->with('info', 'Profile update failed!');
+        }
+    }
 
     public function historyOrder()
     {
@@ -173,4 +176,5 @@ class MitraController extends Controller
         return view('mitra.history', ['users' => $users]);
 
     }
+
 }
