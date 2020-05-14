@@ -51,7 +51,7 @@ Route::get('/buyer/marketOrder', function() {
     return view('pembeli.orderPasar');
 });
 
-Route::get('/buyer/marketOrderMakmurr', function() {
+Route::get('/buyer/marketOrderMakmur', function() {
     return view('pembeli.pasar');
 });
 
