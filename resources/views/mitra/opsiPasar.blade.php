@@ -8,10 +8,10 @@
 </div>
 <div class="row justify-content-center mt-2">
     <div class="col-sm-3 text-center">
-        <a class="btn btn-secondary btn-lg" href="#">Pasar Ikan</a>
+        <a class="btn btn-secondary btn-lg" href="/mitra/stock/fish">Pasar Ikan</a>
     </div>
     <div class="col-sm-3 text-center">
-        <a class="btn btn-secondary btn-lg" href="#">Pasar Sayur</a>
+        <a class="btn btn-secondary btn-lg" href="/mitra/stock/vegetable">Pasar Sayur</a>
     </div>
 </div>
 @endsection
