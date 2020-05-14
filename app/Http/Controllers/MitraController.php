@@ -18,7 +18,8 @@ class MitraController extends Controller
 
     public function index()
     {
-        return Auth::guard('mitra')->user();
+        $user = Auth::guard('mitra')->user();
+        return view('mitra.profil', ['user'=>$user]); 
     }
 
     public function showLogin()
@@ -126,5 +127,12 @@ class MitraController extends Controller
         $sayur = Auth::guard('mitra') -> user() -> stock -> where('type_pasar', '=', 'sayur');
 
         return view('mitra.stoksayur', ['sayur'=>$sayur]);
+    }
+
+    public function destroyStok($id){
+        $stok = Stock::findOrFail($id);
+        $stok->delete();
+
+        return redirect()->back();
     }
 }
