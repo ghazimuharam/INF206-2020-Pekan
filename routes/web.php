@@ -27,8 +27,10 @@ Route::get('/mitra/marketoptions', 'MitraController@marketOptions');
 Route::get('/mitra/profile', 'MitraController@index')->name('mitraprofile');
 Route::get('/mitra/logout', 'MitraController@destroy')->name('mitralogout');
 Route::get('/mitra/order', 'MitraController@showOrder');
+
 Route::get('/mitra/editprofile', 'MitraController@editProfile')->name('editprofile');
 Route::post('/mitra/profile', 'MitraController@updateProfile')->name('mitraprofile');
+Route::get('/mitra/history', 'MitraController@historyOrder');
 
 Route::get('/pembeli/login', 'UserController@showLogin')->name('pembelilogin');
 Route::post('/pembeli/login','UserController@doLogin')->name('pembelilogin');
@@ -41,9 +43,6 @@ Route::get('/mitra/notification', function() {
     return view('mitra.notifikasi');
 });
 
-Route::get('/mitra/history', function() {
-    return view('mitra.history');
-});
 
 Route::get('/buyer/marketOptions', function() {
     return view('pembeli.opsiPasar');

@@ -136,6 +136,7 @@ class MitraController extends Controller
         return redirect()->back();
     }
 
+
      //ubahprofil
      public function editProfile() {
 	    $user = Auth::guard('mitra')->user();
@@ -165,5 +166,11 @@ class MitraController extends Controller
             ]);
 
         return redirect(route('mitraprofile'));
+
+    public function historyOrder()
+    {
+        $users = Auth::guard('mitra') -> user()->sellerOrderHistory;
+        return view('mitra.history', ['users' => $users]);
+
     }
 }
