@@ -73,4 +73,12 @@ class UserController extends Controller
         $user = Auth::user();
         return view('pembeli.profil',['user'=>$user]);
     }
+
+    
+     //ubahprofil
+     public function editProfile() {
+	    $user = Auth::guard('pembeli')->user();
+        return view('pembeli.editprofile',['user' => $user]);
+     }
+    
 }
