@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/mitra/login', 'MitraController@showLogin')->name('mitralogin');
     Route::post('/mitra/login', 'MitraController@doLogin')->name('mitralogin');
@@ -46,6 +47,10 @@ Route::get('/mitra/notification', function() {
     return view('mitra.notifikasi');
 });
 
+Route::get('mitra/changePassword', function() {
+    return view('mitra.ubahpassword');
+});
+
 
 Route::get('/buyer/marketOptions', function() {
     return view('pembeli.opsiPasar');
@@ -62,7 +67,6 @@ Route::get('/buyer/marketOrderSayur', function() {
 Route::get('/mitra/stock/vegetable', 'MitraController@displayStokSayur');
 Route::post('/mitra/stock/vegetable', 'MitraController@updateStokSayur');
 Route::get('/mitra/stock/{id}/delete', 'MitraController@destroyStok');
-
 Route::get('/mitra/stock/fish', 'MitraController@displayStokIkan');
 Route::post('/mitra/stock/fish', 'MitraController@updateStokIkan');
 
@@ -74,7 +78,6 @@ Route::get('/buyer/register', function() {
     return view('pembeli.daftar');
 });
 
-
 Route::get('/buyer/detail', function() {
     return view('pembeli.detail');
 });
@@ -85,8 +88,23 @@ Route::get('/buyer/profile', function() {
 
 Route::get('/test', 'TestController@index');
 
-Route::get('admin/dashboard', function() {
+
+Route::get('/admin/login', function() {
+    return view('admin.login');
+});
+
+Route::get('/admin/dashboard', function() {
     return view('admin.dashboard');
 });
 
+Route::get('/admin/userManagement', function() {
+    return view('admin.userManagement');
+});
 
+Route::get('/admin/addUser', function() {
+    return view('admin.addUser');
+});
+
+Route::get('/admin/changeUser', function() {
+    return view('admin.editUser');
+});
