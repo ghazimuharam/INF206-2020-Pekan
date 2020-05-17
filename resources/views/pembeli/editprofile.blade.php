@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section('title', 'Edit user - Mitra');
+@section('title', 'Edit user - User');
 
 @section('content')
 <div class="container">

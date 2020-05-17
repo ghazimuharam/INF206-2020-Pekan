@@ -27,7 +27,7 @@
 				</div>
 
 		      	<button type="submit" class="btn btn-primary">Ubah Password</button>
-		      	 <a href="{{url()->previous()}}" class="btn btn-danger">Batal</a>
+		      	 <a href="" class="btn btn-danger">Batal</a>
 			</form>
 		</div>
 	</div>

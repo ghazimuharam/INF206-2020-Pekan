@@ -34,10 +34,6 @@
                     <a class="nav-item nav-link" href="#">Profile</a>
                 </div>
             </div>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href=""><i class="fas fa-user"></i> Edit Profil</a>
-              <a class="dropdown-item" href=""><i class="fas fa-key"></i> Ubah password</a>
-            </div>
         </nav>
         <div class="row justify-content-center">
             <img src="{{ url('keranjang.png') }}" width="15%" height="15%">

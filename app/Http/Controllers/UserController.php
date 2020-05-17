@@ -77,8 +77,31 @@ class UserController extends Controller
     
      //ubahprofil
      public function editProfile() {
-	    $user = Auth::guard('pembeli')->user();
-        return view('pembeli.editprofile',['user' => $user]);
+	    $user = Auth::user();
+        return view('pembeli.editprofile',['user'=>$user]);
      }
     
+     public function updateProfile(Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required|numeric',
+            'email' => 'required|email:rfc,dns',
+        ]);
+
+        $update = Auth::user()->update([
+            'name'  => $request->name,
+            'email'  => $request->email,
+            'phone'  => $request->phone,
+            'market_name'  => '-',
+            'vehicle_name'  => '-',
+            'vrn'  => '-',
+            'mitra_status' => 'pembeli',
+            'roles_id' => '3',
+            ]);
+        if($update){
+            return redirect()->back()->with('info', 'Profile updated successfully!');
+        }else{
+            return redirect()->back()->with('info', 'Profile update failed!');
+        }
+     }
 }

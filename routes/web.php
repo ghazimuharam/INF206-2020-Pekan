@@ -39,7 +39,7 @@ Route::get('/pembeli/register', 'UserController@showRegister')->name('pembelireg
 Route::post('/pembeli/register','UserController@doRegister')->name('pembeliregis');
 Route::get('/pembeli/profile','UserController@showProfile')->name('pembeliprofile');
 Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('editprofile');
-Route::post('/pembeli/profile', 'MitraController@updateProfile')->name('pembeliprofile');
+Route::post('/pembeli/profile', 'UserController@updateProfile')->name('pembeliprofile');
 
 
 Route::get('/mitra/notification', function() {
