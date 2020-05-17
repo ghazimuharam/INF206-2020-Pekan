@@ -138,7 +138,7 @@ class MitraController extends Controller
 
 
      //ubahprofil
-     public function editProfile() {
+    public function editProfile() {
 	    $user = Auth::guard('mitra')->user();
         return view('mitra.editprofile',['user' => $user]);
     }

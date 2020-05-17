@@ -74,6 +74,12 @@ class UserController extends Controller
         return view('pembeli.profil',['user'=>$user]);
     }
 
+
+    public function historyUser()
+    {
+        $user = Auth::user()->userOrderHistory;
+        return view('pembeli.history',['users'=>$user]);
+
     public function orderPasarSayur(){
         $users = User::all()->where('mitra_status','=','active')->take(4)->shuffle();
         return view('pembeli.orderPasarSayur', ['users'=>$users]);
@@ -108,5 +114,6 @@ class UserController extends Controller
         }else{
             return redirect()->back()->with('info', 'Profile update failed!');
         }
+
     }
 }
