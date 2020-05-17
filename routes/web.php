@@ -28,17 +28,24 @@ Route::get('/mitra/marketoptions', 'MitraController@marketOptions');
 Route::get('/mitra/profile', 'MitraController@index')->name('mitraprofile');
 Route::get('/mitra/logout', 'MitraController@destroy')->name('mitralogout');
 Route::get('/mitra/order', 'MitraController@showOrder');
-
 Route::get('/mitra/editprofile', 'MitraController@editProfile')->name('editprofile');
 Route::post('/mitra/profile', 'MitraController@updateProfile')->name('mitraprofile');
 Route::get('/mitra/history', 'MitraController@historyOrder');
+Route::get('/mitra/ubahpassw', 'MitraController@ubahPassw')->name('ubahpassw');
+Route::post('mitra/login', 'MitraController@updatePassw')->name('mitralogin');
 
 Route::get('/pembeli/login', 'UserController@showLogin')->name('pembelilogin');
 Route::post('/pembeli/login','UserController@doLogin')->name('pembelilogin');
 Route::get('/pembeli/register', 'UserController@showRegister')->name('pembeliregis');
 Route::post('/pembeli/register','UserController@doRegister')->name('pembeliregis');
 Route::get('/pembeli/profile','UserController@showProfile')->name('pembeliprofile');
+
 Route::get('/pembeli/history','UserController@historyUser');
+
+Route::get('/pembeli/order/sayur','UserController@orderPasarSayur')->name('pembeliorders');
+Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('editprofile');
+Route::post('/pembeli/profile', 'UserController@updateProfile')->name('pembeliprofile');
+
 
 Route::get('/mitra/notification', function() {
     return view('mitra.notifikasi');
@@ -57,10 +64,6 @@ Route::get('/buyer/marketOrder', function() {
     return view('pembeli.orderPasar');
 });
 
-Route::get('/buyer/marketOrderSayur', function() {
-    return view('pembeli.orderPasarSayur');
-});
-
 Route::get('/mitra/stock/vegetable', 'MitraController@displayStokSayur');
 Route::post('/mitra/stock/vegetable', 'MitraController@updateStokSayur');
 Route::get('/mitra/stock/{id}/delete', 'MitraController@destroyStok');
@@ -69,7 +72,7 @@ Route::post('/mitra/stock/fish', 'MitraController@updateStokIkan');
 
 
 Route::get('/buyer/register', function() {
-    return view('pembeli.daftar');
+    return view('pembeli.register');
 });
 
 Route::get('/buyer/detail', function() {

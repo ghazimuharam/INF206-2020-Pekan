@@ -16,7 +16,7 @@
                 <div class="btn btn-light btn-lg" style="border-radius: 30px">
                     <div class="card-body" >
                         <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/baef645c521242c8be067fcdf83edbd4?quality=95&fake=.png" alt="ikan" width="60%" height="80%">
-                        <br> Pasar Murah 
+                        <br> <a href="/pembeli/order/sayur/{{ $users[0]->id }}" style="color:black; text-decoration:none;">{{ $users[0]->market_name }}</a>
                     </div> 
                 </div>
             </div>
@@ -29,7 +29,7 @@
                 <div class="btn btn-light btn-lg" style="border-radius: 30px">
                     <div class="card-body" >
                         <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/baef645c521242c8be067fcdf83edbd4?quality=95&fake=.png" alt="ikan" width="60%" height="80%">
-                        <br> Pasar Senen
+                        <br> <a href="/pembeli/order/sayur/{{ $users[1]->id }}" style="color:black; text-decoration:none;">{{ $users[1]->market_name }}</a>
                     </div> 
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 <div class="btn btn-light btn-lg" style="border-radius: 30px">
                     <div class="card-body" >
                         <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/baef645c521242c8be067fcdf83edbd4?quality=95&fake=.png" alt="ikan" width="60%" height="80%">
-                        <br> Pasar Rezeki
+                        <br> <a href="/pembeli/order/sayur/{{ $users[2]->id }}" style="color:black; text-decoration:none;">{{ $users[2]->market_name }}</a>
                     </div> 
                 </div>
             </div>
@@ -57,7 +57,7 @@
                 <div class="btn btn-light btn-lg" style="border-radius: 30px">
                     <div class="card-body" >
                         <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/baef645c521242c8be067fcdf83edbd4?quality=95&fake=.png" alt="ikan" width="60%" height="80%">
-                        <br> Pasar Ojol
+                        <br> <a href="/pembeli/order/sayur/{{ $users[3]->id }}" style="color:black; text-decoration:none;">{{ $users[3]->market_name }}</a>
                     </div> 
                 </div>
             </div>

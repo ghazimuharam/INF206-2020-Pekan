@@ -176,5 +176,18 @@ class MitraController extends Controller
         return view('mitra.history', ['users' => $users]);
 
     }
+    
+    public function ubahPassw() {
+	    $user = Auth::guard('mitra')->user();
+        return view('mitra.ubahpassw',['user' => $user]);
+    }
+
+    public function updatePassw(Request $request) {
+        if($request->session()->get('login') > 0) { 
+            return view('ubahpassw');
+       }else{
+           return redirect('/mitra.login');
+       }
+    }
 
 }

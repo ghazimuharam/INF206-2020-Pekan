@@ -12,9 +12,7 @@
 						{{session('error')}}
 					</div>
 				@endif
-			  <form action="{{url('/user/password/'.session('id'))}}" method="post" enctype="multipart/form-data">
-					@csrf
-					{{method_field('PATCH')}}
+			  <form action="{route('mitralogin')}}" method="POST">
 				<div class="form-group mb-2">
 					<p class="mb-1">Password saat ini</p>
 					<input type="password" class="form-control" name="password_sekarang" required>
@@ -29,7 +27,7 @@
 				</div>
 
 		      	<button type="submit" class="btn btn-primary">Ubah Password</button>
-		      	 <a href="{{url()->previous()}}" class="btn btn-danger">Batal</a>
+		      	 <a href="" class="btn btn-danger">Batal</a>
 			</form>
 		</div>
 	</div>
