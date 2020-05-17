@@ -73,4 +73,10 @@ class UserController extends Controller
         $user = Auth::user();
         return view('pembeli.profil',['user'=>$user]);
     }
+
+    public function historyUser()
+    {
+        $user = Auth::user()->userOrderHistory;
+        return view('pembeli.history',['users'=>$user]);
+    }
 }

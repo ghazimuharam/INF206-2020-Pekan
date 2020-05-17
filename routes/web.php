@@ -38,7 +38,7 @@ Route::post('/pembeli/login','UserController@doLogin')->name('pembelilogin');
 Route::get('/pembeli/register', 'UserController@showRegister')->name('pembeliregis');
 Route::post('/pembeli/register','UserController@doRegister')->name('pembeliregis');
 Route::get('/pembeli/profile','UserController@showProfile')->name('pembeliprofile');
-
+Route::get('/pembeli/history','UserController@historyUser');
 
 Route::get('/mitra/notification', function() {
     return view('mitra.notifikasi');
@@ -67,9 +67,6 @@ Route::get('/mitra/stock/{id}/delete', 'MitraController@destroyStok');
 Route::get('/mitra/stock/fish', 'MitraController@displayStokIkan');
 Route::post('/mitra/stock/fish', 'MitraController@updateStokIkan');
 
-Route::get('/buyer/history', function() {
-    return view('pembeli.history');
-});
 
 Route::get('/buyer/register', function() {
     return view('pembeli.daftar');
