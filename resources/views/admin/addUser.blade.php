@@ -3,6 +3,7 @@
 @section('title','Add User')
 
 @section('content')
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
