@@ -83,3 +83,6 @@ Route::get('/buyer/profile', function() {
 Route::get('/test', 'TestController@index');
 
 
+Route::get('admin/dashboard', function() {
+    return view('admin.dashboard');
+});
