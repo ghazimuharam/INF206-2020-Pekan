@@ -28,10 +28,11 @@ Route::get('/mitra/marketoptions', 'MitraController@marketOptions');
 Route::get('/mitra/profile', 'MitraController@index')->name('mitraprofile');
 Route::get('/mitra/logout', 'MitraController@destroy')->name('mitralogout');
 Route::get('/mitra/order', 'MitraController@showOrder');
-
 Route::get('/mitra/editprofile', 'MitraController@editProfile')->name('editprofile');
 Route::post('/mitra/profile', 'MitraController@updateProfile')->name('mitraprofile');
 Route::get('/mitra/history', 'MitraController@historyOrder');
+Route::get('/mitra/ubahpassw', 'MitraController@ubahPassw')->name('ubahpassw');
+Route::post('mitra/login', 'MitraController@updatePassw')->name('mitralogin');
 
 Route::get('/pembeli/login', 'UserController@showLogin')->name('pembelilogin');
 Route::post('/pembeli/login','UserController@doLogin')->name('pembelilogin');
@@ -39,6 +40,8 @@ Route::get('/pembeli/register', 'UserController@showRegister')->name('pembelireg
 Route::post('/pembeli/register','UserController@doRegister')->name('pembeliregis');
 Route::get('/pembeli/profile','UserController@showProfile')->name('pembeliprofile');
 Route::get('/pembeli/order/sayur','UserController@orderPasarSayur')->name('pembeliorders');
+Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('editprofile');
+Route::post('/pembeli/profile', 'UserController@updateProfile')->name('pembeliprofile');
 
 Route::get('/mitra/notification', function() {
     return view('mitra.notifikasi');
@@ -71,7 +74,6 @@ Route::get('/buyer/register', function() {
     return view('pembeli.register');
 });
 
-
 Route::get('/buyer/detail', function() {
     return view('pembeli.detail');
 });
@@ -81,6 +83,11 @@ Route::get('/buyer/profile', function() {
 });
 
 Route::get('/test', 'TestController@index');
+
+
+Route::get('/admin/login', function() {
+    return view('admin.login');
+});
 
 Route::get('/admin/dashboard', function() {
     return view('admin.dashboard');
@@ -96,8 +103,4 @@ Route::get('/admin/addUser', function() {
 
 Route::get('/admin/changeUser', function() {
     return view('admin.editUser');
-});
-
-Route::get('admin/dashboard', function() {
-    return view('admin.dashboard');
 });
