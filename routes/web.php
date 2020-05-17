@@ -44,6 +44,10 @@ Route::get('/mitra/notification', function() {
     return view('mitra.notifikasi');
 });
 
+Route::get('mitra/changePassword', function() {
+    return view('mitra.ubahpassword');
+});
+
 
 Route::get('/buyer/marketOptions', function() {
     return view('pembeli.opsiPasar');
@@ -60,7 +64,6 @@ Route::get('/buyer/marketOrderSayur', function() {
 Route::get('/mitra/stock/vegetable', 'MitraController@displayStokSayur');
 Route::post('/mitra/stock/vegetable', 'MitraController@updateStokSayur');
 Route::get('/mitra/stock/{id}/delete', 'MitraController@destroyStok');
-
 Route::get('/mitra/stock/fish', 'MitraController@displayStokIkan');
 Route::post('/mitra/stock/fish', 'MitraController@updateStokIkan');
 
@@ -97,11 +100,8 @@ Route::get('/admin/addUser', function() {
 
 Route::get('/admin/changeUser', function() {
     return view('admin.editUser');
+});
 
 Route::get('admin/dashboard', function() {
     return view('admin.dashboard');
-});
-
-Route::get('mitra/ubahpassw', function() {
-    return view('mitra.ubahpassw');
 });

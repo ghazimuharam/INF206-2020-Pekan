@@ -12,7 +12,7 @@ class UserController extends Controller
     public function index()
     {
         $user = Auth::guard('pembeli')->user();
-        return view('pembeli.profil', ['user'=>$user]); 
+        return view('pembeli.profil', ['user'=>$user]);
     }
 
     public function showLogin()
