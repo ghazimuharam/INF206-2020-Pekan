@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/mitra/login', 'MitraController@showLogin')->name('mitralogin');
     Route::post('/mitra/login', 'MitraController@doLogin')->name('mitralogin');
@@ -81,6 +82,21 @@ Route::get('/buyer/profile', function() {
 });
 
 Route::get('/test', 'TestController@index');
+
+Route::get('/admin/dashboard', function() {
+    return view('admin.dashboard');
+});
+
+Route::get('/admin/userManagement', function() {
+    return view('admin.userManagement');
+});
+
+Route::get('/admin/addUser', function() {
+    return view('admin.addUser');
+});
+
+Route::get('/admin/changeUser', function() {
+    return view('admin.editUser');
 
 Route::get('admin/dashboard', function() {
     return view('admin.dashboard');
