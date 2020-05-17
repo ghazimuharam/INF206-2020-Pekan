@@ -39,9 +39,9 @@ Route::post('/pembeli/login','UserController@doLogin')->name('pembelilogin');
 Route::get('/pembeli/register', 'UserController@showRegister')->name('pembeliregis');
 Route::post('/pembeli/register','UserController@doRegister')->name('pembeliregis');
 Route::get('/pembeli/profile','UserController@showProfile')->name('pembeliprofile');
+Route::get('/pembeli/order/sayur','UserController@orderPasarSayur')->name('pembeliorders');
 Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('editprofile');
 Route::post('/pembeli/profile', 'UserController@updateProfile')->name('pembeliprofile');
-
 
 Route::get('/mitra/notification', function() {
     return view('mitra.notifikasi');
@@ -60,10 +60,6 @@ Route::get('/buyer/marketOrder', function() {
     return view('pembeli.orderPasar');
 });
 
-Route::get('/buyer/marketOrderSayur', function() {
-    return view('pembeli.orderPasarSayur');
-});
-
 Route::get('/mitra/stock/vegetable', 'MitraController@displayStokSayur');
 Route::post('/mitra/stock/vegetable', 'MitraController@updateStokSayur');
 Route::get('/mitra/stock/{id}/delete', 'MitraController@destroyStok');
@@ -75,7 +71,7 @@ Route::get('/buyer/history', function() {
 });
 
 Route::get('/buyer/register', function() {
-    return view('pembeli.daftar');
+    return view('pembeli.register');
 });
 
 Route::get('/buyer/detail', function() {
