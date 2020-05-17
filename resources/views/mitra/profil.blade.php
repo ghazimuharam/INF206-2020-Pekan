@@ -39,7 +39,13 @@
         <h4 class="mt-3">Nomor Plat</h4>
         <h5>{{$user->vrn}}</h5>
     </div>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href=""><i class="fas fa-user"></i> Edit Profil</a>
+        <a class="dropdown-item" href=""><i class="fas fa-key"></i> Ubah password</a>
+    </div>
 </div>
+
+
 
 
 @endsection
