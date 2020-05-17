@@ -83,7 +83,6 @@ Route::get('/buyer/profile', function() {
 
 Route::get('/test', 'TestController@index');
 
-
 Route::get('/admin/dashboard', function() {
     return view('admin.dashboard');
 });
@@ -98,4 +97,11 @@ Route::get('/admin/addUser', function() {
 
 Route::get('/admin/changeUser', function() {
     return view('admin.editUser');
+
+Route::get('admin/dashboard', function() {
+    return view('admin.dashboard');
+});
+
+Route::get('mitra/ubahpassw', function() {
+    return view('mitra.ubahpassw');
 });

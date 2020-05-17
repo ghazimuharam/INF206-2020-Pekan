@@ -11,8 +11,8 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = Auth::guard('mitra')->user();
-        return view('mitra.profil', ['user'=>$user]); 
+        $user = Auth::guard('pembeli')->user();
+        return view('pembeli.profil', ['user'=>$user]); 
     }
 
     public function showLogin()
