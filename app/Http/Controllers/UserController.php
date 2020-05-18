@@ -79,19 +79,20 @@ class UserController extends Controller
     {
         $user = Auth::user()->userOrderHistory;
         return view('pembeli.history',['users'=>$user]);
+    }
 
     public function orderPasarSayur(){
         $users = User::all()->where('mitra_status','=','active')->take(4)->shuffle();
         return view('pembeli.orderPasarSayur', ['users'=>$users]);
     }
 
-    
+
      //ubahprofil
     public function editProfile() {
         $user = Auth::user();
         return view('pembeli.editprofile',['user'=>$user]);
     }
-    
+
     public function updateProfile(Request $request) {
         $request->validate([
             'name' => 'required',

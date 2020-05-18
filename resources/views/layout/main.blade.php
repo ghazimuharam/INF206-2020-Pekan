@@ -27,12 +27,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link mr-3" href="#">Home</a>
-                    <a class="nav-item nav-link mr-3" href="#">Notifikasi</a>
-                    <a class="nav-item nav-link mr-3" href="#">User</a>
-                    <a class="nav-item nav-link" href="#">Profile</a>
-                </div>
+                @auth('mitra')
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link mr-3" href="{{ route('mitrahome') }}">Home</a>
+                        <a class="nav-item nav-link mr-3" href="{{ route('notifikasi') }}">Notifikasi</a>
+                        <a class="nav-item nav-link" href="{{ route('mitraprofile') }}">Profile</a>
+                        <a class="nav-item nav-link mr-3" href="{{ route('mitralogout') }}">Logout</a>
+                    </div>
+                @endauth
+
             </div>
         </nav>
         <div class="row justify-content-center">

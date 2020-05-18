@@ -19,7 +19,7 @@ class MitraController extends Controller
     public function index()
     {
         $user = Auth::guard('mitra')->user();
-        return view('mitra.profil', ['user'=>$user]); 
+        return view('mitra.profil', ['user'=>$user]);
     }
 
     public function showLogin()
@@ -95,11 +95,11 @@ class MitraController extends Controller
 
     public function updateStokIkan(Request $request){
         $request->validate([
-            'nama_barang' => 'required' , 
+            'nama_barang' => 'required' ,
         ]);
         Stock::create([
             'user_id' => Auth::guard('mitra')->user()->id,
-            'type_pasar' => 'ikan', 
+            'type_pasar' => 'ikan',
             'nama_barang' => $request->nama_barang,
         ]);
         return redirect('/mitra/stock/fish');
@@ -113,11 +113,11 @@ class MitraController extends Controller
 
     public function updateStokSayur(Request $request){
         $request->validate([
-            'nama_barang' => 'required' , 
+            'nama_barang' => 'required' ,
         ]);
         Stock::create([
             'user_id' => Auth::guard('mitra')->user()->id,
-            'type_pasar' => 'sayur', 
+            'type_pasar' => 'sayur',
             'nama_barang' => $request->nama_barang,
         ]);
         return redirect('/mitra/stock/vegetable');
@@ -176,18 +176,25 @@ class MitraController extends Controller
         return view('mitra.history', ['users' => $users]);
 
     }
-    
+
     public function ubahPassw() {
-	    $user = Auth::guard('mitra')->user();
-        return view('mitra.ubahpassw',['user' => $user]);
+        return view('mitra.ubahpassword');
     }
 
     public function updatePassw(Request $request) {
-        if($request->session()->get('login') > 0) { 
-            return view('ubahpassw');
-       }else{
-           return redirect('/mitra.login');
-       }
+        $request->validate([
+            'passwordnow' => 'required',
+            'password' => 'required|confirmed'
+        ]);
+        $user = Auth::guard('mitra')->user();
+        if(Hash::check($request->passwordnow, $user->password)){
+            $user->update([
+                'password' => Hash::make($request->password)
+            ]);
+            return redirect()->back()->with('info', 'Password updated successfully!');
+        }else{
+            return redirect()->back()->with('failed', 'Password update failed!');
+        }
     }
 
 }

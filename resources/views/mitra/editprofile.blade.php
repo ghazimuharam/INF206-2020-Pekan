@@ -61,6 +61,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-success">Update Perubahan</button>
+                <a href="{{ route('mitraprofile') }}" class="btn btn-danger">Kembali</a>
             </form>
 		</div>
 	</div>
