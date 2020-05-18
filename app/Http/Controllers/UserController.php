@@ -74,6 +74,11 @@ class UserController extends Controller
         return view('pembeli.profil',['user'=>$user]);
     }
 
+    public function orderPasar(){
+        $users = User::all()->where('mitra_status','=','active')->take(4)->shuffle();
+        return view('pembeli.orderPasar', ['users'=>$users]);
+    }
+
     public function orderPasarSayur(){
         $users = User::all()->where('mitra_status','=','active')->take(4)->shuffle();
         return view('pembeli.orderPasarSayur', ['users'=>$users]);

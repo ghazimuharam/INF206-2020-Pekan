@@ -32,7 +32,7 @@ Route::get('/mitra/editprofile', 'MitraController@editProfile')->name('editprofi
 Route::post('/mitra/profile', 'MitraController@updateProfile')->name('mitraprofile');
 Route::get('/mitra/history', 'MitraController@historyOrder');
 Route::get('/mitra/ubahpassw', 'MitraController@ubahPassw')->name('ubahpassw');
-Route::post('mitra/login', 'MitraController@updatePassw')->name('mitralogin');
+
 
 Route::get('/pembeli/login', 'UserController@showLogin')->name('pembelilogin');
 Route::post('/pembeli/login','UserController@doLogin')->name('pembelilogin');
@@ -40,6 +40,7 @@ Route::get('/pembeli/register', 'UserController@showRegister')->name('pembelireg
 Route::post('/pembeli/register','UserController@doRegister')->name('pembeliregis');
 Route::get('/pembeli/profile','UserController@showProfile')->name('pembeliprofile');
 Route::get('/pembeli/order/sayur','UserController@orderPasarSayur')->name('pembeliorders');
+Route::get('/pembeli/order/ikan','UserController@orderPasar')->name('pembeliorderss');
 Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('editprofile');
 Route::post('/pembeli/profile', 'UserController@updateProfile')->name('pembeliprofile');
 
