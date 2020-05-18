@@ -39,5 +39,23 @@
             </div>
         <form>
     </div>  
+    <div class="col-lg-4">
+        @if ($errors->any())
+            <div class="row">
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        @endif
+        @if(session('info'))
+            <div class="row">
+                <div class="text-danger">{{ session('info') }}</div>
+            </div>
+        @endif
+    </div>
 </div>
 @endsection
