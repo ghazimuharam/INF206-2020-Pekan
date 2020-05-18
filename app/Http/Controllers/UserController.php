@@ -74,9 +74,16 @@ class UserController extends Controller
         return view('pembeli.profil',['user'=>$user]);
     }
 
+
     public function orderPasar(){
         $users = User::all()->where('mitra_status','=','active')->take(4)->shuffle();
         return view('pembeli.orderPasar', ['users'=>$users]);
+     }
+
+    public function historyUser()
+    {
+        $user = Auth::user()->userOrderHistory;
+        return view('pembeli.history',['users'=>$user]);
     }
 
     public function orderPasarSayur(){
@@ -84,13 +91,13 @@ class UserController extends Controller
         return view('pembeli.orderPasarSayur', ['users'=>$users]);
     }
 
-    
+
      //ubahprofil
     public function editProfile() {
         $user = Auth::user();
         return view('pembeli.editprofile',['user'=>$user]);
     }
-    
+
     public function updateProfile(Request $request) {
         $request->validate([
             'name' => 'required',
@@ -113,5 +120,6 @@ class UserController extends Controller
         }else{
             return redirect()->back()->with('info', 'Profile update failed!');
         }
+
     }
 }
