@@ -35,7 +35,7 @@ class MitraController extends Controller
         ]);
 
         if(Auth::guard('mitra')->attempt(['email' => $request->email, 'password' => $request->password, 'mitra_status' => 'active', 'roles_id' => '2'])){
-            return redirect(route('mitraprofile'));
+            return redirect(route('mitrahome'));
         }
         else
         {

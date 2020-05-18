@@ -43,30 +43,19 @@ Route::post('/mitra/ubahpassword', 'MitraController@updatePassw')->name('mitraub
 
 Route::get('/pembeli/login', 'UserController@showLogin')->name('pembelilogin');
 Route::post('/pembeli/login','UserController@doLogin')->name('pembelilogin');
+Route::get('/pembeli/logout','UserController@destroy')->name('pembelilogout');
 Route::get('/pembeli/register', 'UserController@showRegister')->name('pembeliregis');
 Route::post('/pembeli/register','UserController@doRegister')->name('pembeliregis');
 Route::get('/pembeli/profile','UserController@showProfile')->name('pembeliprofile');
 Route::get('/pembeli/history','UserController@historyUser');
 Route::get('/pembeli/order/sayur','UserController@orderPasarSayur')->name('pembeliorders');
-
+Route::get('/pembeli/order/{name}/{id}','UserController@orderDetails')->name('pembeliorderdetails');
+Route::post('/pembeli/order/{name}/{id}','UserController@submitDetails')->name('pembeliorderdetails');
 Route::get('/pembeli/order/ikan','UserController@orderPasar')->name('pembeliorderss');
 Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('editprofile');
-
 Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('pembelieditprofile');
 Route::post('/pembeli/profile', 'UserController@updateProfile')->name('pembeliprofile');
-
-
-Route::get('/mitra/notification', function() {
-    return view('mitra.notifikasi');
-});
-
-Route::get('mitra/changePassword', function() {
-    return view('mitra.ubahpassword');
-});
-
-Route::get('/buyer/marketOptions', function() {
-    return view('pembeli.opsiPasar');
-});
+Route::get('/pembeli/marketoptions', 'UserController@marketOptions')->name('pembelihome');
 
 Route::get('/buyer/marketOrder', function() {
     return view('pembeli.orderPasar');
