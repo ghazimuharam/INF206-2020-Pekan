@@ -10,7 +10,7 @@
             <div class="card-body" >
                 <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/1360cd1bf9404099a5230588ab2bc332?quality=95&fake=.png" heigth="113" width="120">
             </div>
-        </div>    
+        </div>
     </div>
 
     <div class ="col-sm-4 mt-4">
@@ -39,13 +39,15 @@
         <h4 class="mt-3">Nomor Plat</h4>
         <h5>{{$user->vrn}}</h5>
     </div>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href=""><i class="fas fa-user"></i> Edit Profil</a>
-        <a class="dropdown-item" href=""><i class="fas fa-key"></i> Ubah password</a>
+</div>
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-7">
+        <a href="{{ route('mitraeditprofile') }}" class="btn btn-outline-dark btn-md btn-block">Ubah Data Profil</a>
     </div>
 </div>
-
-
-
-
+<div class="row justify-content-center mt-3">
+    <div class="col-lg-7">
+        <a href="{{ route('mitraubahpw') }}" class="btn btn-outline-dark btn-md btn-block">Ubah Password</a>
+    </div>
+</div>
 @endsection
