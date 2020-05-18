@@ -16,8 +16,8 @@
                 <div class="btn btn-light btn-lg" style="border-radius: 30px">
                     <div class="card-body" >
                         <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/baef645c521242c8be067fcdf83edbd4?quality=95&fake=.png" alt="ikan" width="60%" height="80%">
-                        <br> Pasar Murah 
-                    </div> 
+                        <br> <a href="{{ route('pembeliorderdetails', ['name' => 'sayur', 'id' => $users[0]->id]) }}" style="color:black; text-decoration:none;">{{ $users[0]->market_name }}</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -29,8 +29,8 @@
                 <div class="btn btn-light btn-lg" style="border-radius: 30px">
                     <div class="card-body" >
                         <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/baef645c521242c8be067fcdf83edbd4?quality=95&fake=.png" alt="ikan" width="60%" height="80%">
-                        <br> Pasar Senen
-                    </div> 
+                        <br> <a href="{{ route('pembeliorderdetails', ['name' => 'sayur', 'id' => $users[1]->id]) }}" style="color:black; text-decoration:none;">{{ $users[1]->market_name }}</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,8 +44,8 @@
                 <div class="btn btn-light btn-lg" style="border-radius: 30px">
                     <div class="card-body" >
                         <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/baef645c521242c8be067fcdf83edbd4?quality=95&fake=.png" alt="ikan" width="60%" height="80%">
-                        <br> Pasar Rezeki
-                    </div> 
+                        <br> <a href="{{ route('pembeliorderdetails', ['name' => 'sayur', 'id' => $users[2]->id]) }}" style="color:black; text-decoration:none;">{{ $users[2]->market_name }}</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,8 +57,8 @@
                 <div class="btn btn-light btn-lg" style="border-radius: 30px">
                     <div class="card-body" >
                         <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/baef645c521242c8be067fcdf83edbd4?quality=95&fake=.png" alt="ikan" width="60%" height="80%">
-                        <br> Pasar Ojol
-                    </div> 
+                        <br> <a href="{{ route('pembeliorderdetails', ['name' => 'sayur', 'id' => $users[3]->id]) }}" style="color:black; text-decoration:none;">{{ $users[3]->market_name }}</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -37,7 +37,7 @@ class MitraController extends Controller
         ]);
 
         if(Auth::guard('mitra')->attempt(['email' => $request->email, 'password' => $request->password, 'mitra_status' => 'active', 'roles_id' => '2'])){
-            return redirect(route('mitraprofile'));
+            return redirect(route('mitrahome'));
         }
         else
         {
@@ -160,7 +160,7 @@ class MitraController extends Controller
 
 
      //ubahprofil
-     public function editProfile() {
+    public function editProfile() {
 	    $user = Auth::guard('mitra')->user();
         return view('mitra.editprofile',['user' => $user]);
     }
@@ -197,6 +197,26 @@ class MitraController extends Controller
     {
         $users = Auth::guard('mitra') -> user()->sellerOrderHistory;
         return view('mitra.history', ['users' => $users]);
+    }
+
+    public function ubahPassw() {
+        return view('mitra.ubahpassword');
+    }
+
+    public function updatePassw(Request $request) {
+        $request->validate([
+            'passwordnow' => 'required',
+            'password' => 'required|confirmed'
+        ]);
+        $user = Auth::guard('mitra')->user();
+        if(Hash::check($request->passwordnow, $user->password)){
+            $user->update([
+                'password' => Hash::make($request->password)
+            ]);
+            return redirect()->back()->with('info', 'Password updated successfully!');
+        }else{
+            return redirect()->back()->with('failed', 'Password update failed!');
+        }
     }
 
 }

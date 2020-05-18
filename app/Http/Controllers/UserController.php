@@ -6,13 +6,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\User;
-
+use App\Order;
 class UserController extends Controller
 {
     public function index()
     {
-        $user = Auth::guard('mitra')->user();
-        return view('mitra.profil', ['user'=>$user]); 
+        $user = Auth::guard('pembeli')->user();
+        return view('pembeli.profil', ['user'=>$user]);
     }
 
     public function showLogin()
@@ -27,8 +27,8 @@ class UserController extends Controller
             'password' => 'required',
         ]);
 
-        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-            return redirect(route('pembeliprofile'));
+        if(Auth::attempt(['email' => $request->email, 'password' => $request->password, 'roles_id' => '3'])){
+            return redirect(route('pembelihome'));
         }
         else
         {
@@ -41,6 +41,10 @@ class UserController extends Controller
         return view('pembeli.register');
     }
 
+    public function destroy(){
+        Auth::logout();
+        return redirect(route('pembelilogin'));
+    }
     public function doRegister(Request $request)
     {
         $request->validate([
@@ -72,5 +76,78 @@ class UserController extends Controller
     public function showProfile(){
         $user = Auth::user();
         return view('pembeli.profil',['user'=>$user]);
+    }
+
+    public function marketOptions(){
+        return view('pembeli.opsiPasar');
+    }
+
+    public function orderPasar(){
+        $users = User::all()->where('mitra_status','=','active')->take(4)->shuffle();
+        return view('pembeli.orderPasar', ['users'=>$users]);
+     }
+
+    public function historyUser()
+    {
+        $user = Auth::user()->userOrderHistory;
+        return view('pembeli.history',['users'=>$user]);
+    }
+
+    public function orderPasarSayur(){
+        $users = User::all()->where('mitra_status','=','active')->take(4)->shuffle();
+        return view('pembeli.orderPasarSayur', ['users'=>$users]);
+    }
+
+    public function orderDetails($name, $id){
+        if($name == 'sayur' || $name == 'ikan'){
+            $mitra = User::findOrFail($id);
+            return view('pembeli.pasar', [ 'mitra' => $mitra ]);
+        }
+        return redirect(route('pembelihome'));
+    }
+
+    public function submitDetails($name, $id){
+        if($name == 'sayur' || $name == 'ikan'){
+            $mitra = User::findOrFail($id);
+            $order = Order::create([
+                'user_id' => Auth::user()->id,
+                'seller_id' => $mitra->id,
+                'type_pasar' => $name,
+                'status_order' => 'created',
+            ]);
+
+            return view('pembeli.pasar', [ 'mitra' => $mitra ]);
+        }
+        return redirect(route('pembelihome'));
+    }
+     //ubahprofil
+    public function editProfile() {
+        $user = Auth::user();
+        return view('pembeli.editprofile',['user'=>$user]);
+    }
+
+    public function updateProfile(Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required|numeric',
+            'email' => 'required|email:rfc,dns',
+        ]);
+
+        $update = Auth::user()->update([
+            'name'  => $request->name,
+            'email'  => $request->email,
+            'phone'  => $request->phone,
+            'market_name'  => '-',
+            'vehicle_name'  => '-',
+            'vrn'  => '-',
+            'mitra_status' => 'pembeli',
+            'roles_id' => '3',
+            ]);
+        if($update){
+            return redirect()->back()->with('info', 'Profile updated successfully!');
+        }else{
+            return redirect()->back()->with('info', 'Profile update failed!');
+        }
+
     }
 }
