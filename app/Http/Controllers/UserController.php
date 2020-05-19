@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use App\Notifications\OrderPlaced;
+use Notification;
 use App\User;
 use App\Order;
 class UserController extends Controller
@@ -115,10 +117,30 @@ class UserController extends Controller
                 'type_pasar' => $name,
                 'status_order' => 'created',
             ]);
-
-            return view('pembeli.pasar', [ 'mitra' => $mitra ]);
+            Notification::send($mitra,new OrderPlaced(Auth::user()->name));
+            return view('pembeli.detail', [ 'mitra' => $mitra ]);
         }
         return redirect(route('pembelihome'));
+    }
+
+    public function pushpost(Request $request){
+        $this->validate($request,[
+            'endpoint'    => 'required',
+            'keys.auth'   => 'required',
+            'keys.p256dh' => 'required'
+        ]);
+        $endpoint = $request->endpoint;
+        $token = $request->keys['auth'];
+        $key = $request->keys['p256dh'];
+        $user = Auth::guard('mitra')->user();
+        $user->updatePushSubscription($endpoint, $key, $token);
+
+        return response()->json(['success' => true],200);
+    }
+
+    public function push(){
+        Notification::send(Auth::guard('mitra')->user(),new OrderPlaced(Auth::guard('mitra')->user()->name));
+        return redirect()->back();
     }
      //ubahprofil
     public function editProfile() {
