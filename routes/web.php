@@ -36,8 +36,6 @@ Route::get('/mitra/profile', 'MitraController@index')->name('mitraprofile');
 Route::get('/mitra/editprofile', 'MitraController@editProfile')->name('mitraeditprofile');
 Route::post('/mitra/profile', 'MitraController@updateProfile')->name('mitraprofile');
 Route::get('/mitra/history', 'MitraController@historyOrder');
-Route::get('/mitra/ubahpassw', 'MitraController@ubahPassw')->name('ubahpassw');
-
 Route::get('/mitra/ubahpassword', 'MitraController@ubahPassw')->name('mitraubahpw');
 Route::post('/mitra/ubahpassword', 'MitraController@updatePassw')->name('mitraubahpw');
 
@@ -47,17 +45,17 @@ Route::get('/pembeli/logout','UserController@destroy')->name('pembelilogout');
 Route::get('/pembeli/register', 'UserController@showRegister')->name('pembeliregis');
 Route::post('/pembeli/register','UserController@doRegister')->name('pembeliregis');
 Route::get('/pembeli/profile','UserController@showProfile')->name('pembeliprofile');
+Route::post('/pembeli/profile', 'UserController@updateProfile')->name('pembeliprofile');
 Route::get('/pembeli/history','UserController@historyUser');
 Route::get('/pembeli/order/sayur','UserController@orderPasarSayur')->name('pembeliorders');
 Route::get('/pembeli/order/{name}/{id}','UserController@orderDetails')->name('pembeliorderdetails');
 Route::post('/pembeli/order/{name}/{id}','UserController@submitDetails')->name('pembeliorderdetails');
 Route::get('/pembeli/order/ikan','UserController@orderPasar')->name('pembeliorderss');
-Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('editprofile');
 Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('pembelieditprofile');
-Route::post('/pembeli/profile', 'UserController@updateProfile')->name('pembeliprofile');
+Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('pembelieditprofile');
 Route::get('/pembeli/marketoptions', 'UserController@marketOptions')->name('pembelihome');
-// Route::get('/pembeli/ubahpassword', 'UserController@ubahPassw')->name('pembeliubahpw');
-// Route::post('/pembeli/ubahpassword', 'UserController@updatePassw')->name('pembeliubahpw');
+Route::get('/pembeli/ubahpassword', 'UserController@ubahPassw')->name('pembeliubahpw');
+Route::post('/pembeli/ubahpassword', 'UserController@updatePassw')->name('pembeliubahpw');
 
 
 
@@ -93,8 +91,4 @@ Route::get('/admin/addUser', function() {
 
 Route::get('/admin/changeUser', function() {
     return view('admin.editUser');
-});
-
-Route::get('/pembeli/ubahpassword', function() {
-    return view('pembeli.ubahpassword');
 });
