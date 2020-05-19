@@ -12,7 +12,7 @@
 </div>
 <div class="row justify-content-center mt-1">
     <div class="h-100 d-inline-block ">
-        <form action="{{ route('pembeliorderdetails', ['name' => 'sayur', 'id' => $mitra->id]) }}" method="POST">
+        <form action="{{ route('pembeliorderdetails', ['name' => $market_type, 'id' => $mitra->id]) }}" method="POST">
             @csrf
             <button type="submit" class="btn btn-lg btn-dark btn-block my-3" >ORDER</button>
         </form>
