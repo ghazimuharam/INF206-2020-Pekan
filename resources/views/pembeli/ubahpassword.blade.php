@@ -3,8 +3,9 @@
 @section('title', 'Ubah Password');
 
 @section('content')
+
 <div class="container">
-	<div class="row justify-content-center mt-5">
+	<div class="row justify-content-center my-5">
 		<div class="col-md-5">
 			<p class="h1 text-center mb-4"><i class="fa fas-car"></i> Ubah Password</p>
 				@if(session('error'))
