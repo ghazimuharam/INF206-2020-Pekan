@@ -46,7 +46,4 @@
     </div>
 </div>
 
-<div class="text-center my-5">
-    <a href="#" class="btn btn-dark btn-lg">Order List</a>
-</div>
 @endsection
