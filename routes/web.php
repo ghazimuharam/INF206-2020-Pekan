@@ -56,6 +56,9 @@ Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('editprof
 Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('pembelieditprofile');
 Route::post('/pembeli/profile', 'UserController@updateProfile')->name('pembeliprofile');
 Route::get('/pembeli/marketoptions', 'UserController@marketOptions')->name('pembelihome');
+// Route::get('/pembeli/ubahpassword', 'UserController@ubahPassw')->name('pembeliubahpw');
+// Route::post('/pembeli/ubahpassword', 'UserController@updatePassw')->name('pembeliubahpw');
+
 
 Route::get('/buyer/marketOrder', function() {
     return view('pembeli.orderPasar');

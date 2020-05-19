@@ -148,6 +148,6 @@ class UserController extends Controller
         }else{
             return redirect()->back()->with('info', 'Profile update failed!');
         }
-
     }
+
 }
