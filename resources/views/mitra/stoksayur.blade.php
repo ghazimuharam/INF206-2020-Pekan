@@ -4,16 +4,15 @@
 
 @section('content')
 
-
-<div class="row"> 
+<div class="row">
     <div class="col-sm-2">
         <div class="card" style="border-radius: 50%">
             <div class="card-body" >
                 <img src="https://marvel-live.freetls.fastly.net/canvas/2020/3/352ca90e7b534cac8a146b1c10aadfa3?quality=95&fake=.png" heigth="110" width="110">
             </div>
-        </div>    
+        </div>
     </div>
-    <div class="col-sm-5 mt-3"> 
+    <div class="col-sm-5 mt-3">
         <label>Available Items</label>
         <div class="card mt-2" style="border-radius: 30px">
             <div class="card-body" >
@@ -23,10 +22,10 @@
                 </p>
                 @endforeach
             </div>
-        </div>    
+        </div>
     </div>
 
-    <div class="col-sm-5 "> 
+    <div class="col-sm-5 ">
         <form action="/mitra/stock/vegetable" method="post">
         @csrf
             <div class="row mt-3">
@@ -47,7 +46,7 @@
     </div>
 </div>
 
-<div class="text-center mt-5">
+<div class="text-center my-5">
     <a href="#" class="btn btn-dark btn-lg">Order List</a>
 </div>
 @endsection

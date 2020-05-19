@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-sm-2">
                     <label></label>
-                    <button class="btn mt-1" type="submit">
+                    <button class="btn mt-3" type="submit">
                         <img src="https://marvel-live.freetls.fastly.net/canvas/2020/3/c3af6b61bcb044539d680ba3f15c747a?quality=95&fake=.png" heigth="30" width="30">
                     </button>
                 </div>

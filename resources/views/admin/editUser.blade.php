@@ -13,7 +13,7 @@
                     </div>
 
                     <!-- Content Row -->
-                    <div class="row">
+                    <div class="row my-1">
                         <!-- Area Chart -->
                         <div class="col-xl-12">
                             <div class="card shadow mb-4">
