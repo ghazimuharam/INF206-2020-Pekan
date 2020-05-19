@@ -82,15 +82,15 @@ class UserController extends Controller
         return view('pembeli.opsiPasar');
     }
 
-    public function orderPasarIkan(){
-        $users = User::all()->where('mitra_status','=','active')->shuffle()->take(4);
-        return view('pembeli.orderPasarIkan', ['users'=>$users]);
-     }
-
     public function historyUser()
     {
         $user = Auth::user()->userOrderHistory;
         return view('pembeli.history',['users'=>$user]);
+    }
+
+    public function orderPasarIkan(){
+        $users = User::all()->where('mitra_status','=','active')->shuffle()->take(4);
+        return view('pembeli.orderPasarIkan', ['users'=>$users]);
     }
 
     public function orderPasarSayur(){
@@ -101,7 +101,7 @@ class UserController extends Controller
     public function orderDetails($name, $id){
         if($name == 'sayur' || $name == 'ikan'){
             $mitra = User::findOrFail($id);
-            return view('pembeli.pasar', [ 'mitra' => $mitra ]);
+            return view('pembeli.pasar', [ 'mitra' => $mitra, 'market_type' => $name]);
         }
         return redirect(route('pembelihome'));
     }
@@ -115,8 +115,8 @@ class UserController extends Controller
                 'type_pasar' => $name,
                 'status_order' => 'created',
             ]);
-
-            return view('pembeli.pasar', [ 'mitra' => $mitra ]);
+            $order = Order::orderBy('id', 'desc')->limit(1)->get();
+            return view('pembeli.detail', [ 'mitra' => $mitra, 'order' => $order]);
         }
         return redirect(route('pembelihome'));
     }
