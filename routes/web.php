@@ -94,3 +94,7 @@ Route::get('/admin/addUser', function() {
 Route::get('/admin/changeUser', function() {
     return view('admin.editUser');
 });
+
+Route::get('/pembeli/ubahpassword', function() {
+    return view('pembeli.ubahpassword');
+});
