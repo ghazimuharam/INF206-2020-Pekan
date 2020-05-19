@@ -12,7 +12,7 @@
 						{{session('error')}}
 					</div>
 				@endif
-              <!-- <form action="{{route('mitraubahpw')}}" method="POST"> -->
+
                 @csrf
 				<div class="form-group mb-2">
 					<p class="mb-1">Password saat ini</p>
@@ -53,7 +53,7 @@
                 </div>
 
                   <button type="submit" class="btn btn-success">Ubah Password</button>
-                  <a href="{{ route('mitraprofile') }}" class="btn btn-danger">Kembali</a>
+                  <a href="{{ route('pembeliprofile') }}" class="btn btn-danger">Kembali</a>
 			</form>
 		</div>
 	</div>
