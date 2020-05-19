@@ -1,9 +1,8 @@
-    @extends('layout.main')
+@extends('layout.main')
 
-    @section('title', 'Market')
+@section('title', 'Market')
 
-    @section('content')
-
+@section('content')
     <div class="row justify-content-center ">
         <img src="https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/truck-256.png" class="rounded mx-auto d-block" alt="...">
     </div>
@@ -17,6 +16,4 @@
                 <button type="submit" class="btn btn-lg btn-dark btn-block my-3" >ORDER</button>
             </form>
         </div>
-    </div>
-
-    @endsection
+@endsection
