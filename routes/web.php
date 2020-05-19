@@ -60,9 +60,6 @@ Route::get('/pembeli/marketoptions', 'UserController@marketOptions')->name('pemb
 // Route::post('/pembeli/ubahpassword', 'UserController@updatePassw')->name('pembeliubahpw');
 
 
-Route::get('/buyer/marketOrder', function() {
-    return view('pembeli.orderPasar');
-});
 
 Route::get('/buyer/register', function() {
     return view('pembeli.register');
