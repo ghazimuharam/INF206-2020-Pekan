@@ -31,6 +31,7 @@
                 @if(Auth::check())
                     <div class="navbar-nav">
                         <a class="nav-item nav-link mr-3" href="{{ route('pembelihome') }}">Home</a>
+                        <a class="nav-item nav-link mr-3" href="{{ route('pembelihistory') }}">History</a>
                         <a class="nav-item nav-link mr-3" href="{{ route('pembeliprofile') }}">Profile</a>
                         <a class="nav-item nav-link" href="{{ route('pembelilogout') }}">Logout</a>
                     </div>
@@ -38,6 +39,7 @@
                     <div class="navbar-nav">
                         <a class="nav-item nav-link mr-3" href="{{ route('mitrahome') }}">Home</a>
                         <a class="nav-item nav-link mr-3" href="{{ route('notifikasi') }}">Notifikasi</a>
+                        <a class="nav-item nav-link mr-3" href="{{ route('mitrahistory') }}">History</a>
                         <a class="nav-item nav-link mr-3" href="{{ route('mitraprofile') }}">Profile</a>
                         <a class="nav-item nav-link" href="{{ route('mitralogout') }}">Logout</a>
                     </div>

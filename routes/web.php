@@ -35,7 +35,7 @@ Route::post('/mitra/stock/fish', 'MitraController@updateStokIkan');
 Route::get('/mitra/profile', 'MitraController@index')->name('mitraprofile');
 Route::get('/mitra/editprofile', 'MitraController@editProfile')->name('mitraeditprofile');
 Route::post('/mitra/profile', 'MitraController@updateProfile')->name('mitraprofile');
-Route::get('/mitra/history', 'MitraController@historyOrder');
+Route::get('/mitra/history', 'MitraController@historyOrder')->name('mitrahistory');
 Route::get('/mitra/ubahpassword', 'MitraController@ubahPassw')->name('mitraubahpw');
 Route::post('/mitra/ubahpassword', 'MitraController@updatePassw')->name('mitraubahpw');
 
@@ -46,7 +46,7 @@ Route::get('/pembeli/register', 'UserController@showRegister')->name('pembelireg
 Route::post('/pembeli/register','UserController@doRegister')->name('pembeliregis');
 Route::get('/pembeli/profile','UserController@showProfile')->name('pembeliprofile');
 Route::post('/pembeli/profile', 'UserController@updateProfile')->name('pembeliprofile');
-Route::get('/pembeli/history','UserController@historyUser');
+Route::get('/pembeli/history','UserController@historyUser')->name('pembelihistory');
 Route::get('/pembeli/order/sayur','UserController@orderPasarSayur')->name('pembeliorders');
 Route::get('/pembeli/order/{name}/{id}','UserController@orderDetails')->name('pembeliorderdetails');
 Route::post('/pembeli/order/{name}/{id}','UserController@submitDetails')->name('pembeliorderdetails');
