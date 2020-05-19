@@ -8,7 +8,7 @@
 </div>
 <div class="row justify-content-center mt-2">
     <div class="col-sm-3 text-center">
-        <a class="btn btn-secondary btn-lg" href="{{ route('pembeliorderss') }}">Pasar Ikan</a>
+        <a class="btn btn-secondary btn-lg" href="{{ route('pembeliorderi') }}">Pasar Ikan</a>
     </div>
     <div class="col-sm-3 text-center">
         <a class="btn btn-secondary btn-lg" href="{{ route('pembeliorders') }}">Pasar Sayur</a>

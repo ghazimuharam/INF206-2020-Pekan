@@ -82,9 +82,9 @@ class UserController extends Controller
         return view('pembeli.opsiPasar');
     }
 
-    public function orderPasar(){
-        $users = User::all()->where('mitra_status','=','active')->take(4)->shuffle();
-        return view('pembeli.orderPasar', ['users'=>$users]);
+    public function orderPasarIkan(){
+        $users = User::all()->where('mitra_status','=','active')->shuffle()->take(4);
+        return view('pembeli.orderPasarIkan', ['users'=>$users]);
      }
 
     public function historyUser()
@@ -94,7 +94,7 @@ class UserController extends Controller
     }
 
     public function orderPasarSayur(){
-        $users = User::all()->where('mitra_status','=','active')->take(4)->shuffle();
+        $users = User::all()->where('mitra_status','=','active')->shuffle()->take(4);
         return view('pembeli.orderPasarSayur', ['users'=>$users]);
     }
 
