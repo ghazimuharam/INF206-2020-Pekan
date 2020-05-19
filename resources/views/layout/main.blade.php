@@ -29,15 +29,27 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                @auth('mitra')
+
+                @if(Auth::check())
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link mr-3" href="{{ route('pembelihome') }}">Home</a>
+                        <a class="nav-item nav-link mr-3" href="{{ route('pembelihistory') }}">History</a>
+                        <a class="nav-item nav-link mr-3" href="{{ route('pembeliprofile') }}">Profile</a>
+                        <a class="nav-item nav-link" href="{{ route('pembelilogout') }}">Logout</a>
+                    </div>
+                @elseif(Auth::guard('mitra')->check())
                     <div class="navbar-nav">
                         <a class="nav-item nav-link mr-3" href="{{ route('mitrahome') }}">Home</a>
                         <a class="nav-item nav-link mr-3" href="{{ route('notifikasi') }}">Notifikasi</a>
-                        <a class="nav-item nav-link" href="{{ route('mitraprofile') }}">Profile</a>
-                        <a class="nav-item nav-link mr-3" href="{{ route('mitralogout') }}">Logout</a>
+                        <a class="nav-item nav-link mr-3" href="{{ route('mitrahistory') }}">History</a>
+                        <a class="nav-item nav-link mr-3" href="{{ route('mitraprofile') }}">Profile</a>
+                        <a class="nav-item nav-link" href="{{ route('mitralogout') }}">Logout</a>
                     </div>
-                @endauth
-
+                @else
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link mr-3" href="/">Home</a>
+                    </div>
+                @endif
             </div>
         </nav>
         <div class="row justify-content-center">

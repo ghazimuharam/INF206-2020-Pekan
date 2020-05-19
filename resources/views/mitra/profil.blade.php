@@ -6,9 +6,9 @@
 
 <div class="row">
     <div class="col-sm-2">
-        <div class="card" style="border-radius: 50%">
-            <div class="card-body" >
-                <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/1360cd1bf9404099a5230588ab2bc332?quality=95&fake=.png" heigth="113" width="120">
+        <div class="card rounded-circle">
+            <div class="card-body">
+                <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/1360cd1bf9404099a5230588ab2bc332?quality=95&fake=.png" heigth="100%" width="100%">
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
         <a href="{{ route('mitraeditprofile') }}" class="btn btn-outline-dark btn-md btn-block">Ubah Data Profil</a>
     </div>
 </div>
-<div class="row justify-content-center mt-3">
+<div class="row justify-content-center my-3">
     <div class="col-lg-7">
         <a href="{{ route('mitraubahpw') }}" class="btn btn-outline-dark btn-md btn-block">Ubah Password</a>
     </div>

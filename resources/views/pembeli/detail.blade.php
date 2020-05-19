@@ -16,5 +16,6 @@
             <p class="text-center">{{ $mitra->name }}</p>
     </div>
 </div>
+
 @endsection
 
