@@ -29,7 +29,7 @@ class OrderPlaced extends Notification
             ->title("Order Received!")
             ->icon('/notification-icon.png')
             ->body("You received an order from $this->nama!")
-            ->action('View App', 'notification_action')
+            ->action('View Order', 'notification_action')
             ->vibrate([200,80,120]);
     }
 
