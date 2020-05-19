@@ -4,7 +4,6 @@
 
 @section('content')
 
-
 <div class="row justify-content-center my-4">
     <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/59cde7560b144546886779ef781e443a?quality=95&fake=.png" alt="ikan" width="8%" height="8%">
 </div>

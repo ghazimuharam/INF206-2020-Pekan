@@ -45,7 +45,7 @@
         <a href="{{ route('mitraeditprofile') }}" class="btn btn-outline-dark btn-md btn-block">Ubah Data Profil</a>
     </div>
 </div>
-<div class="row justify-content-center mt-3">
+<div class="row justify-content-center my-3">
     <div class="col-lg-7">
         <a href="{{ route('mitraubahpw') }}" class="btn btn-outline-dark btn-md btn-block">Ubah Password</a>
     </div>
