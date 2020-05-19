@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = Auth::guard('pembeli')->user();
+        $user = Auth::user();
         return view('pembeli.profil', ['user'=>$user]);
     }
 
@@ -82,9 +82,9 @@ class UserController extends Controller
         return view('pembeli.opsiPasar');
     }
 
-    public function orderPasar(){
-        $users = User::all()->where('mitra_status','=','active')->take(4)->shuffle();
-        return view('pembeli.orderPasar', ['users'=>$users]);
+    public function orderPasarIkan(){
+        $users = User::all()->where('mitra_status','=','active')->shuffle()->take(4);
+        return view('pembeli.orderPasarIkan', ['users'=>$users]);
      }
 
     public function historyUser()
@@ -94,7 +94,7 @@ class UserController extends Controller
     }
 
     public function orderPasarSayur(){
-        $users = User::all()->where('mitra_status','=','active')->take(4)->shuffle();
+        $users = User::all()->where('mitra_status','=','active')->shuffle()->take(4);
         return view('pembeli.orderPasarSayur', ['users'=>$users]);
     }
 
@@ -150,4 +150,23 @@ class UserController extends Controller
         }
     }
 
+    public function ubahPassw(){
+        return view('pembeli.ubahpassword');
+    }
+
+    public function updatePassw(Request $request){
+        $request->validate([
+            'passwordnow' => 'required',
+            'password' => 'required|confirmed'
+        ]);
+        $user = Auth::user();
+        if(Hash::check($request->passwordnow, $user->password)){
+            $user->update([
+                'password' => Hash::make($request->password)
+            ]);
+            return redirect()->back()->with('info', 'Password updated successfully!');
+        }else{
+            return redirect()->back()->with('failed', 'Password update failed!');
+        }
+    }
 }

@@ -9,15 +9,15 @@
     <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/5622ea6e4182426ab33f86c301fa7581?quality=95&fake=.png" alt="ikan" width="8%" height="8%">
 </div>
 
-<div class="row justify-content-center mt-2">
+<div class="row justify-content-center my-2">
     <div class="col-sm-2 text-center">
         <div class="row justify-content-center mt-2">
             <div class="card" style="border-radius: 30px">
                 <div class="btn btn-light btn-lg" style="border-radius: 30px">
                     <div class="card-body" >
                         <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/baef645c521242c8be067fcdf83edbd4?quality=95&fake=.png" alt="ikan" width="60%" height="80%">
-                        <br> <a href="/pembeli/order/ikan/{{ $users[0]->id }}" style="color:black; text-decoration:none;">{{ $users[0]->market_name }}</a>
-                    </div> 
+                        <br><a href="{{ route('pembeliorderdetails', ['name' => 'ikan', 'id' => $users[0]->id]) }}" style="color:black; text-decoration:none;">{{ $users[0]->market_name }}</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -29,8 +29,8 @@
                 <div class="btn btn-light btn-lg" style="border-radius: 30px">
                     <div class="card-body" >
                         <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/baef645c521242c8be067fcdf83edbd4?quality=95&fake=.png" alt="ikan" width="60%" height="80%">
-                        <br> <a href="/pembeli/order/ikan/{{ $users[1]->id }}" style="color:black; text-decoration:none;">{{ $users[1]->market_name }}</a>
-                    </div> 
+                        <br> <a href="{{ route('pembeliorderdetails', ['name' => 'ikan', 'id' => $users[1]->id]) }}" style="color:black; text-decoration:none;">{{ $users[1]->market_name }}</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,8 +44,8 @@
                 <div class="btn btn-light btn-lg" style="border-radius: 30px">
                     <div class="card-body" >
                         <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/baef645c521242c8be067fcdf83edbd4?quality=95&fake=.png" alt="ikan" width="60%" height="80%">
-                        <br> <a href="/pembeli/order/ikan/{{ $users[2]->id }}" style="color:black; text-decoration:none;">{{ $users[2]->market_name }}</a>
-                    </div> 
+                        <br> <a href="{{ route('pembeliorderdetails', ['name' => 'ikan', 'id' => $users[2]->id]) }}" style="color:black; text-decoration:none;">{{ $users[2]->market_name }}</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,8 +57,8 @@
                 <div class="btn btn-light btn-lg" style="border-radius: 30px">
                     <div class="card-body" >
                         <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/baef645c521242c8be067fcdf83edbd4?quality=95&fake=.png" alt="ikan" width="60%" height="80%">
-                        <br> <a href="/pembeli/order/ikan/{{ $users[3]->id }}" style="color:black; text-decoration:none;">{{ $users[3]->market_name }}</a>
-                    </div> 
+                        <br> <a href="{{ route('pembeliorderdetails', ['name' => 'ikan', 'id' => $users[3]->id]) }}" style="color:black; text-decoration:none;">{{ $users[3]->market_name }}</a>
+                    </div>
                 </div>
             </div>
         </div>

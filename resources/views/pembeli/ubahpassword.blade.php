@@ -12,7 +12,7 @@
 						{{session('error')}}
 					</div>
 				@endif
-
+            <form action="{{ route('pembeliubahpw') }}" method="POST">
                 @csrf
 				<div class="form-group mb-2">
 					<p class="mb-1">Password saat ini</p>

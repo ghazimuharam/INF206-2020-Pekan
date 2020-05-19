@@ -3,6 +3,7 @@
 @section('title', 'Edit user - User');
 
 @section('content')
+
 <div class="container">
 	<div class="row justify-content-center mt-5">
 		<div class="col-md-8">
@@ -45,9 +46,10 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-success">Update Perubahan</button>
+                <button type="submit" class="btn btn-success mb-3">Update Perubahan</button>
             </form>
 		</div>
 	</div>
 </div>
+
 @endsection
