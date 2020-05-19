@@ -47,10 +47,10 @@ Route::post('/pembeli/register','UserController@doRegister')->name('pembeliregis
 Route::get('/pembeli/profile','UserController@showProfile')->name('pembeliprofile');
 Route::post('/pembeli/profile', 'UserController@updateProfile')->name('pembeliprofile');
 Route::get('/pembeli/history','UserController@historyUser')->name('pembelihistory');
+Route::get('/pembeli/order/ikan','UserController@orderPasarIkan')->name('pembeliorderi');
 Route::get('/pembeli/order/sayur','UserController@orderPasarSayur')->name('pembeliorders');
 Route::get('/pembeli/order/{name}/{id}','UserController@orderDetails')->name('pembeliorderdetails');
 Route::post('/pembeli/order/{name}/{id}','UserController@submitDetails')->name('pembeliorderdetails');
-Route::get('/pembeli/order/ikan','UserController@orderPasarIkan')->name('pembeliorderi');
 Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('pembelieditprofile');
 Route::get('/pembeli/editprofile', 'UserController@editProfile')->name('pembelieditprofile');
 Route::get('/pembeli/marketoptions', 'UserController@marketOptions')->name('pembelihome');
