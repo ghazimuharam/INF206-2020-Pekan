@@ -116,6 +116,7 @@ class MitraController extends Controller
             'keys.auth'   => 'required',
             'keys.p256dh' => 'required'
         ]);
+
         $endpoint = $request->endpoint;
         $token = $request->keys['auth'];
         $key = $request->keys['p256dh'];
