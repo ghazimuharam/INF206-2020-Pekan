@@ -36,8 +36,8 @@
 						Admin Register
 					</span>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-lg-5 ml-5">
+                <div class="row mt-3 mx-5">
+                    <div class="col-lg-6">
                         <form class="form" action="" method="POST">
                             @csrf
                             <div class="form-group mt-2">
@@ -49,7 +49,7 @@
                                 <input id="No_Hp" class="form-control form-control-lg" type="text" name="phone" style="border-radius: 50px" value="">
                             </div>
                     </div>
-                    <div class="col-lg-5 ml-2">
+                    <div class="col-lg-6">
                         <div class="form-group mt-2">
                             <label for="email">Email</label>
                             <input id="email" class="form-control form-control-lg" type="text" name="email" style="border-radius: 50px" value="">

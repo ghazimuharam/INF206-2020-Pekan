@@ -36,29 +36,30 @@
 						Admin Login
 					</span>
                 </div>
-                    <form class="login100-form" method="POST" action="">
+                <div class="row mt-3 mx-5 justify-content-center">
+                    <form class="form" method="POST" action="">
                         @csrf
-                        <div class="m-b-18">
-                            <h6 class="my-2">Username</h6>
-                            <div class="form-group">
-                                <input type="text" name="username" class="form-control bg-light" placeholder="Username"/>
-                            </div>
-                            <h6 class="my-2">Password</h6>
-                            <div class="form-group">
-                                <input type="password" name="password" class="form-control bg-light" placeholder="Password"/>
-                            </div>
+                        <div class="form-group mt-2">
+                            <label for="email">Email</label>
+                            <input id="email" class="form-control form-control-lg" type="text" name="email" style="border-radius: 50px">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="password">Password</label>
+                            <input id="password" class="form-control form-control-lg" type="password" name="password" style="border-radius: 50px">
                         </div>
                         {{-- @if(session('message'))
                             <p>
                                 {{ session('message') }}
                             </p>
                         @endif --}}
-                        <div class="container-login100-form-btn">
-                            <button class="login100-form-btn" type="submit">Login</button>
-                            <h5><a class="ml-3 login100-form-btn" href="/">Home</a></h5>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="row mb-2 justify-content-center">
+                        <h5><a class="ml-3 login100-form-btn" href="/">Login</a></h5>
+                    </div>
+                    <div class="row mb-5 justify-content-center">
+                        <h5><a class="ml-3 login100-form-btn" href="/">Home</a></h5>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
