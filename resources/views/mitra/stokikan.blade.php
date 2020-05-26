@@ -6,10 +6,8 @@
 
 <div class="row my-3">
     <div class="col-sm-2">
-        <div class="card rounded-circle">
-            <div class="card-body">
-                <img src="https://marvel-live.freetls.fastly.net/canvas/2020/3/5d5124973e2c44a89c91d7765d92e6d1?quality=95&fake=.png" heigth="100%" width="100%">
-            </div>
+        <div class="container-sm">
+            <img src="https://marvel-live.freetls.fastly.net/canvas/2020/3/5d5124973e2c44a89c91d7765d92e6d1?quality=95&fake=.png" heigth="100%" width="100%" style="max-width: 170px;">
         </div>
     </div>
     <div class="col-sm-5 mt-3">
@@ -34,10 +32,14 @@
                         <input class="form-control form-control-lg" type="text" placeholder="New Item" name="nama_barang" style="border-radius: 50px">
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-1">
                     <label></label>
-                    <button class="btn mt-3" type="submit">
-                        <img src="https://marvel-live.freetls.fastly.net/canvas/2020/3/c3af6b61bcb044539d680ba3f15c747a?quality=95&fake=.png" heigth="30" width="30">
+                    <button class="btn" type="submit">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="https://marvel-live.freetls.fastly.net/canvas/2020/3/c3af6b61bcb044539d680ba3f15c747a?quality=95&fake=.png" heigth="25" width="25">
+                            </div>
+                        </div>
                     </button>
                 </div>
             </div>
