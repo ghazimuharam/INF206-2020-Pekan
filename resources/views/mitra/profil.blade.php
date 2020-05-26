@@ -4,20 +4,15 @@
 
 @section('content')
 
-<div class="row">
-    <div class="col-sm-2">
-        <div class="card rounded-circle">
-            <div class="card-body">
-                <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/1360cd1bf9404099a5230588ab2bc332?quality=95&fake=.png" heigth="100%" width="100%">
-            </div>
-        </div>
-    </div>
-
-    <div class ="col-sm-4 mt-4">
-        <div class="my-5 col-lg-20">
+<div class="container-sm">
+    <div class="row">
+        <div class="col-lg-2 mt-2 col-sm-6 p-4">
+            <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/1360cd1bf9404099a5230588ab2bc332?quality=95&fake=.png" class="rounded-circle" style="max-width: 170px;">
+        </div> 
+        <div class="col-lg-4 mt-5">
             <h3>{{$user->name}}</h3>
-        </div>
-    </div>
+        </div> 
+    </div> 
 </div>
 
 <div class="row">
@@ -49,5 +44,6 @@
     <div class="col-lg-7">
         <a href="{{ route('mitraubahpw') }}" class="btn btn-outline-dark btn-md btn-block">Ubah Password</a>
     </div>
-</div>
+</div
 @endsection
+
