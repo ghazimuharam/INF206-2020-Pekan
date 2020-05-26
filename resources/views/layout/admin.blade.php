@@ -24,7 +24,7 @@
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #061C30;">
 
             <!-- Sidebar - Brand -->
-            <h3 class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <h3 class="sidebar-brand d-flex align-items-center justify-content-center">
                 <div class="sidebar-brand-text mx-3">P E K A N</div>
             </h3>
 
