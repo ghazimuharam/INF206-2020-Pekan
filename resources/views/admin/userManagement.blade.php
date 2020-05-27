@@ -41,25 +41,29 @@
                                             <thead class="thead-dark text-center">
                                                 <tr>
                                                     <th>No</th>
-                                                    <th>UniqueCode</th>
-                                                    <th>Status</th>
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Phone</th>
+                                                    <th>Account Created</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
-                                            {{-- <tbody>
+                                            <tbody>
                                                 <?php $i = 1; ?>
-                                                @foreach ($data as $d)
+                                                @foreach ($users as $user)
                                                     <tr>
                                                         <td class="text-center">{{ $i++ }}</td>
-                                                        <td class="text-center">{{ $d->uniquecode }}</td>
-                                                        <td class="text-center">{{ $d->status }}</td>
+                                                        <td class="text-center">{{ $user->name }}</td>
+                                                        <td class="text-center">{{ $user->email }}</td>
+                                                        <td class="text-center">{{ $user->phone }}</td>
+                                                        <td class="text-center">{{ $user->created_at->format('m/d/Y') }}</td>
                                                         <td class="text-center">
-                                                            <a href="/admin/userManagement/ubahUser/{{ $d -> id }}" class="btn btn-warning">Change</a>
-                                                            <a href="/admin/userManagement/hapusUser/{{ $d -> id }}" class="btn btn-danger">Remove</a>
+                                                            <a href="/admin/userManagement/ubahUser/{{ $user -> id }}" class="btn btn-warning">Change</a>
+                                                            <a href="{{ route("admindeleteuser", $user -> id) }}" class="btn btn-danger">Remove</a>
                                                         </td>
                                                     </tr>
                                                 @endforeach
-                                            </tbody> --}}
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
