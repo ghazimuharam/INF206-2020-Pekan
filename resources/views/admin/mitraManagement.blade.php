@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section('title','User Management')
+@section('title','Mitra Management')
 
 @section('content')
 
@@ -9,7 +9,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">User Management</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Mitra Management</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -21,7 +21,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <!-- Topbar Search -->
-                                        <form action="{{ route('adminusersearch') }}" method="GET" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                                        <form action="{{ route('adminmitrasearch') }}" method="GET" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                                             <div class="input-group">
                                                 @csrf
                                                 <input type="text" name="cari" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
@@ -42,6 +42,7 @@
                                                     <th>Email</th>
                                                     <th>Phone</th>
                                                     <th>Account Created</th>
+                                                    <th>Status</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -54,16 +55,17 @@
                                                         <td class="text-center">{{ $user->email }}</td>
                                                         <td class="text-center">{{ $user->phone }}</td>
                                                         <td class="text-center">{{ $user->created_at->format('m/d/Y') }}</td>
+                                                        <td class="text-center">{{ $user->mitra_status }}</td>
                                                         <td class="text-center">
-                                                            <a href="/admin/changeUser/{{ $user -> id }}" class="btn btn-warning mt-2">Change</a>
-                                                            <a href="{{ route("admindeleteuser", $user -> id) }}" class="btn btn-danger mt-2">Remove</a>
+                                                            <a href="/admin/changeMitra/{{ $user -> id }}" class="btn btn-warning mt-2">Change</a>
+                                                            <a href="{{ route("admindeletemitra", $user -> id) }}" class="btn btn-danger mt-2">Remove</a>
                                                         </td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
                                         </table>
                                     </div>
-                                </div>
+                                </>
                             </div>
                         </div>
                     </div>
