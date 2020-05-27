@@ -62,8 +62,9 @@ Route::post('/admin/login', 'AdminController@doLogin')->name('adminlogin');
 Route::get('/admin/dashboard', 'AdminController@index')->name('adminhome');
 Route::get('/admin/logout', 'AdminController@destroy')->name('adminlogout');
 Route::get('/admin/userManagement', 'AdminController@userManagement')->name('adminusermanagement');
+Route::get('/admin/mitraManagement', 'AdminController@mitraManagement')->name('adminmitramanagement');
 Route::get('admin/deleteUser/{id}', 'AdminController@userDelete')->name('admindeleteuser');
-Route::get('admin/search', 'AdminController@userSearch')->name('adminsearch');
+Route::get('admin/deleteMitra/{id}', 'AdminController@mitraDelete')->name('admindeletemitra');
 Route::get('/admin/register', function() {
     return view('admin.register');
 });
