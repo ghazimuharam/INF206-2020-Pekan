@@ -18,8 +18,8 @@ class CreateOrdersTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('seller_id');
             $table->string('type_pasar');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('seller_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('seller_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

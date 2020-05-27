@@ -59,40 +59,17 @@ Route::get('/pembeli/marketoptions', 'UserController@marketOptions')->name('pemb
 Route::get('/pembeli/ubahpassword', 'UserController@ubahPassw')->name('pembeliubahpw');
 Route::post('/pembeli/ubahpassword', 'UserController@updatePassw')->name('pembeliubahpw');
 
-
-
-Route::get('/buyer/register', function() {
-    return view('pembeli.register');
-});
-
-Route::get('/buyer/detail', function() {
-    return view('pembeli.detail');
-});
-
-Route::get('/buyer/profile', function() {
-    return view('pembeli.profil');
-});
-
 Route::get('/test', 'MitraController@testNotif');
 Route::get('/user/order/push','MitraController@push')->name('push');
 Route::post('/user/order/push','MitraController@pushpost');
 Route::get('/test', 'TestController@index');
 
-Route::get('/admin/login', function() {
-    return view('admin.login');
-});
-
-Route::get('/admin/register', function() {
-    return view('admin.register');
-});
-
-Route::get('/admin/dashboard', function() {
-    return view('admin.dashboard');
-});
-
-Route::get('/admin/userManagement', function() {
-    return view('admin.userManagement');
-});
+Route::get('/admin/login', 'AdminController@showLogin')->name('adminlogin');
+Route::post('/admin/login', 'AdminController@doLogin')->name('adminlogin');
+Route::get('/admin/dashboard', 'AdminController@index')->name('adminhome');
+Route::get('/admin/logout', 'AdminController@destroy')->name('adminlogout');
+Route::get('/admin/userManagement', 'AdminController@userManagement')->name('adminusermanagement');
+Route::get('admin/deleteUser/{id}', 'AdminController@userDelete')->name('admindeleteuser');
 
 Route::get('/admin/addUser', function() {
     return view('admin.addUser');

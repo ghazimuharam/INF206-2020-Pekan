@@ -37,7 +37,7 @@
 					</span>
                 </div>
                 <div class="row mt-3 mx-5 justify-content-center">
-                    <form class="form" method="POST" action="">
+                    <form class="form" method="POST" action="{{ route('adminlogin') }}">
                         @csrf
                         <div class="form-group mt-2">
                             <label for="email">Email</label>
@@ -54,7 +54,7 @@
                         @endif --}}
                     </div>
                     <div class="row mb-2 justify-content-center">
-                        <h5><a class="ml-3 login100-form-btn" href="/">Login</a></h5>
+                        <h5><button type="submit" class="ml-3 login100-form-btn">Login</button></h5>
                     </div>
                     <div class="row mb-5 justify-content-center">
                         <h5><a class="ml-3 login100-form-btn" href="/">Home</a></h5>
