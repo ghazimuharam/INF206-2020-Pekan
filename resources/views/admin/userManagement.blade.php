@@ -21,7 +21,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <!-- Topbar Search -->
-                                        <form action="{{ url('/admin/search') }}" method="GET" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                                        <form action="{{ route('adminsearch') }}" method="GET" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                                             <div class="input-group">
                                                 @csrf
                                                 <input type="text" name="cari" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
@@ -55,8 +55,8 @@
                                                         <td class="text-center">{{ $user->phone }}</td>
                                                         <td class="text-center">{{ $user->created_at->format('m/d/Y') }}</td>
                                                         <td class="text-center">
-                                                            <a href="/admin/userManagement/ubahUser/{{ $user -> id }}" class="btn btn-warning">Change</a>
-                                                            <a href="{{ route("admindeleteuser", $user -> id) }}" class="btn btn-danger">Remove</a>
+                                                            <a href="/admin/changeUser/{{ $user -> id }}" class="btn btn-warning mt-2">Change</a>
+                                                            <a href="{{ route("admindeleteuser", $user -> id) }}" class="btn btn-danger mt-2">Remove</a>
                                                         </td>
                                                     </tr>
                                                 @endforeach

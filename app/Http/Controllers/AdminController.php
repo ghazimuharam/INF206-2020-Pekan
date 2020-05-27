@@ -55,4 +55,18 @@ class AdminController extends Controller
         $request = User::where('roles_id','=','3')->where('name', 'like', "%".$cari."%")->paginate();
         return view('admin.userManagement', ['users'=>$request]);
     }
+
+    public function userEdit($id){
+        $users = User::findOrFail($id);
+        return view('admin.editUser', ['users'=>$users]);
+    }
+
+    public function postEdit(Request $request){
+        User::where('roles_id','=','3')->where('id', $request->id)->update([
+            'name'=>$request->name,
+            'phone'=>$request->phone,
+            'email'=>$request->email,
+        ]);
+        return redirect(route('adminusermanagement'));
+    }
 }
