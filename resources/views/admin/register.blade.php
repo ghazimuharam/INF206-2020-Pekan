@@ -33,32 +33,35 @@
             <div class="wrap-login100">
                 <div class="login100-form-title" style="background-image: url({{ asset('assets/images/sayur.jpg') }});">
 					<span class="login100-form-title-1">
-						Admin Login
+						Admin Register
 					</span>
                 </div>
-                <div class="row mt-3 mx-5 justify-content-center">
-                    <form class="form" method="POST" action="">
-                        @csrf
+                <div class="row mt-3 mx-5">
+                    <div class="col-lg-6">
+                        <form class="form" action="" method="POST">
+                            @csrf
+                            <div class="form-group mt-2">
+                                <label for="name">Nama Lengkap</label>
+                                <input id="name" class="form-control form-control-lg" type="text" name="name" style="border-radius: 50px" value="">
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="No_Hp">Nomor HP</label>
+                                <input id="No_Hp" class="form-control form-control-lg" type="text" name="phone" style="border-radius: 50px" value="">
+                            </div>
+                    </div>
+                    <div class="col-lg-6">
                         <div class="form-group mt-2">
                             <label for="email">Email</label>
-                            <input id="email" class="form-control form-control-lg" type="text" name="email" style="border-radius: 50px">
+                            <input id="email" class="form-control form-control-lg" type="text" name="email" style="border-radius: 50px" value="">
                         </div>
                         <div class="form-group mt-2">
                             <label for="password">Password</label>
-                            <input id="password" class="form-control form-control-lg" type="password" name="password" style="border-radius: 50px">
+                            <input id="password" class="form-control form-control-lg" type="password" name="password" style="border-radius: 50px" value="">
                         </div>
-                        {{-- @if(session('message'))
-                            <p>
-                                {{ session('message') }}
-                            </p>
-                        @endif --}}
                     </div>
-                    <div class="row mb-2 justify-content-center">
-                        <h5><a class="ml-3 login100-form-btn" href="/">Login</a></h5>
-                    </div>
-                    <div class="row mb-5 justify-content-center">
-                        <h5><a class="ml-3 login100-form-btn" href="/">Home</a></h5>
-                    </div>
+                </div>
+                <div class="row justify-content-center mt-3">
+                    <button type="submit" class="btn login100-form-btn mb-5">SUBMIT</button>
                 </form>
             </div>
         </div>
@@ -83,8 +86,3 @@
 
 </body>
 </html>
-<script>
-    $('.message a').click(function(){
-        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-    });
-</script>

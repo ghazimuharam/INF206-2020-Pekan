@@ -32,8 +32,7 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <div class="d-flex col-lg-8 justify-content-end">
-                                            {{-- <a class="btn p-1 mr-3 col-xl-2 btn-secondary" href="/admin/userManagement/export_excel">Export to Excel</a> --}}
+                                        <div class="d-flex col-lg-8 justify-content-end mt-2">
                                             <a class="btn p-1 col-xl-3 btn-info" href="/admin/addUser">Add User</a>
                                         </div>
                                     </div>

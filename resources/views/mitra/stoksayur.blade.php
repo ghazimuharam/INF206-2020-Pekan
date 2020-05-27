@@ -6,10 +6,8 @@
 
 <div class="row my-3">
     <div class="col-sm-2">
-        <div class="card rounded-circle">
-            <div class="card-body">
-                <img src="https://marvel-live.freetls.fastly.net/canvas/2020/3/352ca90e7b534cac8a146b1c10aadfa3?quality=95&fake=.png" heigth="100%" width="100%">
-            </div>
+        <div class="container-sm">
+            <img src="https://marvel-live.freetls.fastly.net/canvas/2020/3/352ca90e7b534cac8a146b1c10aadfa3?quality=95&fake=.png" heigth="100%" width="100%" style="max-width: 170px;">
         </div>
     </div>
     <div class="col-sm-5 mt-3">
@@ -36,8 +34,12 @@
                 </div>
                 <div class="col-sm-2">
                     <label></label>
-                    <button class="btn mt-3" type="submit">
-                        <img src="https://marvel-live.freetls.fastly.net/canvas/2020/3/c3af6b61bcb044539d680ba3f15c747a?quality=95&fake=.png" heigth="30" width="30">
+                    <button class="btn" type="submit">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="https://marvel-live.freetls.fastly.net/canvas/2020/3/c3af6b61bcb044539d680ba3f15c747a?quality=95&fake=.png" heigth="25" width="25">
+                            </div>
+                        </div>
                     </button>
                 </div>
             </div>
