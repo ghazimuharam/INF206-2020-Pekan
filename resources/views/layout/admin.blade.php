@@ -44,6 +44,12 @@
                         <span>User Management</span></a>
                 </li>
 
+                <li class="nav-item active">
+                    <a class="nav-link" href="/admin/mitraManagement">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Mitra Management</span></a>
+                </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
         </ul>
@@ -89,7 +95,7 @@
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::guard('admin')->user()->name }}</span>
                         <img class="img-profile rounded-circle" src="{{ asset('assets/images/default-profile-pic.png') }}">
                         </a>
                         <!-- Dropdown - User Information -->
@@ -99,8 +105,7 @@
                             Profile
                         </a>
                         <div class="dropdown-divider"></div>
-                        {{-- <a class="dropdown-item" href="{{ route('adminlogout') }}"> --}}
-                        <a class="dropdown-item" href="">
+                        <a class="dropdown-item" href="{{ route('adminlogout') }}">
                             Logout
                         </a>
                         </div>
