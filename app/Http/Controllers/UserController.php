@@ -65,7 +65,7 @@ class UserController extends Controller
                 'vehicle_name'  => '-',
                 'vrn'  => '-',
                 'mitra_status' => 'pembeli',
-                'roles_id' => '3',
+                'roles_id' => 3,
             ]);
 
         if($user){
