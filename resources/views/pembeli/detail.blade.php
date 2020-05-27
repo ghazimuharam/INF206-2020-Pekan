@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h3 class="text-center mt-4"  >Order Detail</h3>
+<h3 class="text-center mt-4">Order Detail</h3>
 <div class="col d-flex justify-content-center">
     <div class="card" style="max-width: 30rem; border-radius: 30px">
         <div class="card-body" >
