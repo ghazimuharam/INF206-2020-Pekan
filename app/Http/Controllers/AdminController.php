@@ -69,4 +69,9 @@ class AdminController extends Controller
         ]);
         return redirect(route('adminusermanagement'));
     }
+
+    public function profileAdmin(){
+        $user = Auth::guard('admin')->user();
+        return view('admin.profile', ['user'=>$user]);
+    }
 }

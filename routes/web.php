@@ -66,18 +66,4 @@ Route::get('/admin/deleteUser/{id}', 'AdminController@userDelete')->name('admind
 Route::get('/admin/search', 'AdminController@userSearch')->name('adminsearch');
 Route::get('/admin/changeUser/{id}', 'AdminController@userEdit')->name('useredit');
 Route::post('/admin/changeUser/{id}', 'AdminController@postEdit')->name('useredit');
-
-
-Route::get('/admin/register', function() {
-    return view('admin.register');
-});
-
-
-
-Route::get('/admin/addUser', function() {
-    return view('admin.addUser');
-});
-
-Route::get('/admin/changeUser', function() {
-    return view('admin.editUser');
-});
+Route::get('/admin/profile', 'AdminController@profileAdmin')->name('adminprofile');
