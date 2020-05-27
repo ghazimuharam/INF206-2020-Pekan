@@ -81,13 +81,31 @@ class AdminController extends Controller
         return view('admin.editUser', ['users'=>$users]);
     }
 
-    public function postEdit(Request $request){
+    public function userEditt(Request $request){
         User::where('roles_id','=','3')->where('id', $request->id)->update([
             'name'=>$request->name,
             'phone'=>$request->phone,
             'email'=>$request->email,
         ]);
         return redirect(route('adminusermanagement'));
+    }
+
+    public function mitraEdit($id){
+        $users = User::findOrFail($id);
+        return view('admin.editMitra', ['users'=>$users]);
+    }
+
+    public function mitraEditt(Request $request){
+        User::where('roles_id','=','2')->where('id', $request->id)->update([
+            'name'=>$request->name,
+            'phone'=>$request->phone,
+            'market_name'=>$request->market_name,
+            'vehicle_name'=>$request->vehicle_name,
+            'vrn'=>$request->vrn,
+            'email'=>$request->email,
+            'mitra_status'=>$request->mitra_status,
+        ]);
+        return redirect(route('adminmitramanagement'));
     }
 
 }
