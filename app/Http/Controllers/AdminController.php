@@ -42,18 +42,38 @@ class AdminController extends Controller
             }
             return redirect()->back()->with('message', 'Error deleting user');
         }
-        return redirect(route('adminlogin'));
+        return redirect(route('adminusermanagement'));
     }
 
     public function destroy(){
         Auth::guard('admin')->logout();
         return redirect(route('adminlogin'));
     }
+    public function mitraManagement(){
+        $user = User::where('roles_id','=','2')->get();
+        return view('admin.mitraManagement', ['users' => $user]);
+    }
+    
+    public function mitraDelete($id){
+        if(Auth::guard('admin')->user()->roles_id == 1){
+            if(User::findOrFail($id)->delete()){
+                return redirect()->back();
+            }
+            return redirect()->back()->with('message', 'Error deleting user');
+        }
+        return redirect(route('adminmitramanagement'));
+    }
 
     public function userSearch(Request $request){
         $cari = $request->cari;
         $request = User::where('roles_id','=','3')->where('name', 'like', "%".$cari."%")->paginate();
         return view('admin.userManagement', ['users'=>$request]);
+    }
+
+    public function mitraSearch(Request $request){
+        $cari = $request->cari;
+        $request = User::where('roles_id','=','2')->where('name', 'like', "%".$cari."%")->paginate();
+        return view('admin.mitraManagement', ['users'=>$request]);
     }
 
     public function userEdit($id){
@@ -69,4 +89,5 @@ class AdminController extends Controller
         ]);
         return redirect(route('adminusermanagement'));
     }
+
 }
