@@ -19,26 +19,35 @@
                             <div class="card shadow mb-4">
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    {{-- <form action="/admin/userManagement/update/{{ $data -> id }}" method="post">
+                                    <form action="/admin/changeUser/{{ $users -> id }}" method="POST">
                                         {{ csrf_field() }}
-                                        {{ method_field('PUT') }}
 
                                         <div class="form-group">
-                                            <label>Uniquecode</label>
-                                            <input type="text" name="uniquecode" class="form-control" value="{{ $data -> uniquecode }}">
-                                            @if($errors->has('uniquecode'))
+                                            <label>Nama Lengkap</label>
+                                            <input type="text" name="name" class="form-control" value="{{ $users -> name }}">
+                                            @if($errors->has('name'))
                                                 <div class="text-danger">
-                                                    {{ $errors->first('uniquecode')}}
+                                                    {{ $errors->first('name')}}
                                                 </div>
                                             @endif
                                         </div>
 
                                         <div class="form-group">
-                                            <label>Status</label>
-                                            <input type="text" name="status" class="form-control" value="{{ $data -> status }}">
-                                            @if($errors->has('status'))
+                                            <label>No HP</label>
+                                            <input type="text" name="phone" class="form-control" value="{{ $users -> phone }}">
+                                            @if($errors->has('phone'))
                                                 <div class="text-danger">
-                                                    {{ $errors->first('status')}}
+                                                    {{ $errors->first('phone')}}
+                                                </div>
+                                            @endif
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input type="text" name="email" class="form-control" value="{{ $users -> email }}">
+                                            @if($errors->has('email'))
+                                                <div class="text-danger">
+                                                    {{ $errors->first('email')}}
                                                 </div>
                                             @endif
                                         </div>
@@ -46,7 +55,7 @@
                                         <div class="text-center d-none d-md-inline"><br><br>
                                             <button type="submit" class="btn btn-primary col-xl-2">CHANGE</button>
                                         </div>
-                                    </form> --}}
+                                    </form> 
                                 </div>
                             </div>
                         </div>
