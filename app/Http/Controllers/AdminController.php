@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\User;
 
 class AdminController extends Controller
@@ -47,5 +48,11 @@ class AdminController extends Controller
     public function destroy(){
         Auth::guard('admin')->logout();
         return redirect(route('adminlogin'));
+    }
+
+    public function userSearch(Request $request){
+        $cari = $request->cari;
+        $request = User::where('roles_id','=','3')->where('name', 'like', "%".$cari."%")->paginate();
+        return view('admin.userManagement', ['users'=>$request]);
     }
 }
