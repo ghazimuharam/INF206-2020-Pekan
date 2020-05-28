@@ -63,11 +63,13 @@ Route::get('/admin/dashboard', 'AdminController@index')->name('adminhome');
 Route::get('/admin/logout', 'AdminController@destroy')->name('adminlogout');
 Route::get('/admin/userManagement', 'AdminController@userManagement')->name('adminusermanagement');
 
-Route::get('/admin/mitraManagement', 'AdminController@mitraManagement')->name('adminmitramanagement');
+Route::get('/admin/mitraManagementActive', 'AdminController@mitraManagementA')->name('adminmitramanagement');
+Route::get('/admin/mitraManagementDeactive', 'AdminController@mitraManagementD')->name('adminmitramanagementdeactive');
 Route::get('admin/deleteMitra/{id}', 'AdminController@mitraDelete')->name('admindeletemitra');
 Route::get('/admin/mitraSearch', 'AdminController@mitraSearch')->name('adminmitrasearch');
 Route::get('/admin/changeMitra/{id}', 'AdminController@mitraEdit')->name('mitraedit');
 Route::post('/admin/changeMitra/{id}', 'AdminController@mitraEditt')->name('mitraedit');
+Route::get('/admin/mitraActive/{id}', 'AdminController@mitraActive')->name('mitraactive');
 
 Route::get('/admin/deleteUser/{id}', 'AdminController@userDelete')->name('admindeleteuser');
 Route::get('/admin/userSearch', 'AdminController@userSearch')->name('adminusersearch');

@@ -49,11 +49,17 @@ class AdminController extends Controller
         Auth::guard('admin')->logout();
         return redirect(route('adminlogin'));
     }
-    public function mitraManagement(){
-        $user = User::where('roles_id','=','2')->get();
-        return view('admin.mitraManagement', ['users' => $user]);
+
+    public function mitraManagementA(){
+        $userActive = User::where('roles_id','=','2')->where('mitra_status','=','active')->get();
+        return view('admin.mitraManagementA', ['users' => $userActive]);
     }
-    
+
+    public function mitraManagementD(){
+        $userDeactive = User::where('roles_id','=','2')->where('mitra_status','=','deactive')->get();
+        return view('admin.mitraManagementD', ['users' => $userDeactive]);
+    }
+
     public function mitraDelete($id){
         if(Auth::guard('admin')->user()->roles_id == 1){
             if(User::findOrFail($id)->delete()){
@@ -108,9 +114,20 @@ class AdminController extends Controller
             'vehicle_name'=>$request->vehicle_name,
             'vrn'=>$request->vrn,
             'email'=>$request->email,
-            'mitra_status'=>$request->mitra_status,
         ]);
         return redirect(route('adminmitramanagement'));
+    }
+
+    public function mitraActive($id){
+        if(Auth::guard('admin')->user()->roles_id == 1){
+            if(User::findOrFail($id)->update([
+                'mitra_status'=>"active",
+            ])){
+                return redirect()->back();
+            }
+            return redirect()->back()->with('message', 'Error update mitra');
+        }
+        return redirect(route('adminmitramanagementdeactive'));
     }
 
     public function adminManagement(){
