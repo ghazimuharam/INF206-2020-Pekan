@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section('title','Change Mitra Data')
+@section('title','Change Admin Data')
 
 @section('content')
 
@@ -9,7 +9,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Change Data Mitra</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Change Data Admin</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -19,7 +19,7 @@
                             <div class="card shadow mb-4">
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <form action="/admin/changeMitra/{{ $users -> id }}" method="POST">
+                                    <form action="/admin/changeAdmin/{{ $users -> id }}" method="POST">
                                         {{ csrf_field() }}
 
                                         <div class="form-group">
@@ -43,36 +43,6 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label>Nama Pasar</label>
-                                            <input type="text" name="market_name" class="form-control" value="{{ $users -> market_name }}">
-                                            @if($errors->has('market_name'))
-                                                <div class="text-danger">
-                                                    {{ $errors->first('market_name')}}
-                                                </div>
-                                            @endif
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Merk Kendaraan</label>
-                                            <input type="text" name="vehicle_name" class="form-control" value="{{ $users -> vehicle_name }}">
-                                            @if($errors->has('vehicle_name'))
-                                                <div class="text-danger">
-                                                    {{ $errors->first('vehicle_name')}}
-                                                </div>
-                                            @endif
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>No Plat</label>
-                                            <input type="text" name="vrn" class="form-control" value="{{ $users -> vrn }}">
-                                            @if($errors->has('vrn'))
-                                                <div class="text-danger">
-                                                    {{ $errors->first('vrn')}}
-                                                </div>
-                                            @endif
-                                        </div>
-
-                                        <div class="form-group">
                                             <label>Email</label>
                                             <input type="text" name="email" class="form-control" value="{{ $users -> email }}">
                                             @if($errors->has('email'))
@@ -85,7 +55,7 @@
                                         <div class="text-center d-none d-md-inline"><br><br>
                                             <button type="submit" class="btn btn-primary col-xl-2">CHANGE</button>
                                         </div>
-                                    </form>
+                                    </form> 
                                 </div>
                             </div>
                         </div>
