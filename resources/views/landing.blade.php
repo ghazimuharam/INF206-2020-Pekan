@@ -27,11 +27,11 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                            <ul class="navbar-nav mr-auto">
-                              <li class="nav-item active">
-                                 <a class="nav-link" href="#">For you & family <span class="sr-only">(current)</span></a>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="{{ route('pembelilogin') }}" tabindex="-1" aria-disabled="true">Login Pembeli</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">ForBusiness</a>
+                                 <a class="nav-link" href="{{ route('mitralogin') }}" tabindex="-1" aria-disabled="true">Login Mitra</a>
                               </li>
                            </ul>
                         </div>
@@ -292,7 +292,7 @@
                            <p>Hemat waktu. </p>
                         </div>
                         <div class="add-btn pricing-btn_wrap">
-                           <a href="#" class="btn btn-success">JOIN</a>
+                           <a href="{{ route('pembeliregis') }}" class="btn btn-success">JOIN</a>
                         </div>
                      </div>
                   </div>
@@ -319,7 +319,7 @@
                            <p>Hemat modal. </p>
                         </div>
                         <div class="add-btn pricing-btn_wrap">
-                           <a href="#" class="btn btn-success">JOIN</a>
+                           <a href="{{ route('mitraregis') }}" class="btn btn-success">JOIN</a>
                         </div>
                      </div>
                   </div>
