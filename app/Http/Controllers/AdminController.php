@@ -113,4 +113,58 @@ class AdminController extends Controller
         return redirect(route('adminmitramanagement'));
     }
 
+    public function adminManagement(){
+        $user = User::where('roles_id','=','1')->get();
+        return view('admin.adminManagement', ['users' => $user]);
+    }
+
+    public function addAdmin(){
+        return view('admin.addAdmin');
+    }
+
+    public function postAdmin(Request $request){
+        User::where('roles_id','=','1')->insert([
+            'name'=>$request->name,
+            'phone'=>$request->phone,
+            'market_name'=>"-",
+            'vehicle_name'=>"-",
+            'vrn'=>"-",
+            'email'=>$request->email,
+            'password'=>$request->password,
+            'mitra_status'=>"-",
+            'roles_id'=>'1',
+        ]);
+        return redirect(route('adminmanagement'));
+    }
+
+    public function adminDelete($id){
+        if(Auth::guard('admin')->user()->roles_id == 1){
+            if(User::findOrFail($id)->delete()){
+                return redirect()->back();
+            }
+            return redirect()->back()->with('message', 'Error deleting user');
+        }
+        return redirect(route('adminmanagement'));
+    }
+
+    public function adminEdit($id){
+        $users = User::findOrFail($id);
+        return view('admin.editAdmin', ['users'=>$users]);
+    }
+
+    public function postAdminEdit(Request $request){
+        User::where('roles_id','=','1')->where('id', $request->id)->update([
+            'name'=>$request->name,
+            'phone'=>$request->phone,
+            'email'=>$request->email,
+            'roles_id'=>'1',
+        ]);
+        return redirect(route('adminmanagement'));
+    }
+
+    public function adminSearch(Request $request){
+        $cari = $request->cari;
+        $request = User::where('roles_id','=','1')->where('name', 'like', "%".$cari."%")->paginate();
+        return view('admin.adminManagement', ['users'=>$request]);
+    }
 }

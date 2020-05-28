@@ -69,9 +69,16 @@ Route::get('/admin/mitraSearch', 'AdminController@mitraSearch')->name('adminmitr
 Route::get('/admin/changeMitra/{id}', 'AdminController@mitraEdit')->name('mitraedit');
 Route::post('/admin/changeMitra/{id}', 'AdminController@mitraEditt')->name('mitraedit');
 
-Route::get('admin/deleteUser/{id}', 'AdminController@userDelete')->name('admindeleteuser');
 Route::get('/admin/deleteUser/{id}', 'AdminController@userDelete')->name('admindeleteuser');
 Route::get('/admin/userSearch', 'AdminController@userSearch')->name('adminusersearch');
 Route::get('/admin/changeUser/{id}', 'AdminController@userEdit')->name('useredit');
 Route::post('/admin/changeUser/{id}', 'AdminController@postEdit')->name('useredit');
 Route::get('/admin/profile', 'AdminController@profileAdmin')->name('adminprofile');
+
+Route::get('/admin/adminManagement', 'AdminController@adminManagement')->name('adminmanagement');
+Route::get('/admin/addAdmin', 'AdminController@addAdmin')->name('addadmin');
+Route::post('/admin/addAdmin', 'AdminController@postAdmin')->name('addadmin');
+Route::get('/admin/deleteAdmin/{id}', 'AdminController@adminDelete')->name('admindeleteadmin');
+Route::get('/admin/changeAdmin/{id}', 'AdminController@adminEdit')->name('adminedit');
+Route::post('/admin/changeAdmin/{id}', 'AdminController@postAdminEdit')->name('adminedit');
+Route::get('/admin/Search', 'AdminController@adminSearch')->name('adminsearch');
