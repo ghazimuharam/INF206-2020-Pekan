@@ -21,7 +21,7 @@
                <div class="row">
                   <div class="col-md-12">
                      <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="#"><img src="{{ asset('assets/landing/images/logo.png') }}" alt="#"></a>
+                        <a class="navbar-brand" href="#"><img src="https://marvel-live.freetls.fastly.net/canvas/2020/3/485b9f77365546428c377c56ee5b3f0a?quality=95&fake=.png" alt="#" style="max-width: 60px;"> PEKAN</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-bars"></i>
                         </button>
@@ -31,8 +31,7 @@
                                  <a class="nav-link" href="#">For you & family <span class="sr-only">(current)</span></a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">For
-                                 Business</a>
+                                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">ForBusiness</a>
                               </li>
                            </ul>
                         </div>
@@ -48,11 +47,11 @@
                   <div class="row">
                      <div class="col-md-6 col-lg-5">
                         <div class="hero-title">
-                           <p>Hello, We are Pekan</p>
-                           <h1>Pekan<br>
-                              made your life easier.
-                           </h1>
-                           <a href="#" data-toggle="modal" data-target="#contactmodal" class="btn btn-danger">Join now</a>
+                           <p>Hello, We are PEKAN</p>
+                           <h2>PEKAN made your life easier!</h2>
+                           <h5>Apakah Anda Siap untuk Kehidupan yang lebih mudah?
+                              Langsung saja berlangganan di PEKAN</h5>
+                           <a href="#getStart" class="btn btn-danger">Getting Started</a>
                         </div>
                      </div>
                   </div>
@@ -97,40 +96,43 @@
                <div class="row">
                   <div class="col-md-12">
                      <div class="center-title">
-                        <h2>A new take on insurance</h2>
-                        <p>Great for individuals and business</p>
+                        <h2>Apa itu PEKAN ?</h2>
                      </div>
                   </div>
                </div>
                <div class="row">
                   <div class="col-md-12 col-lg-7 ml-auto">
                      <div class="insurance-title_wrap">
-                        <h5>Monotonectally deploy seamless data and resource maximizing systems. </h5>
-                        <h6>Great for individuals and small families up to 4 members.</h6>
-                        <p class="insurance-para">A strong, up-to-date, employee benefits health insurance program
-                           is vital for attracting and retaining good employees. It takes diligence, creativity
-                           and attention to detail to ensure you are getting the best “bang for your buck” each
-                           and every year.
+                        <h5>Hidup terasa lebih mudah dengan menggunakan PEKAN </h5>
+                        <p class="insurance-para">Lelah dengan urusan kantor? <br>
+                           Anak masih kecil-kecil? <br>
+                           Hingga membuat anda tidak sempat ke pasar <br>
+                           Kami tau solusinya <br>
+                           Pekan adalah web yang dapat mempermudah hidup anda dalam memenuhi kebutuhan
                         </p>
                         <div class="insurance-type d-flex align-items-center">
                            <img src="{{ asset('assets/landing/images/tick.png') }}" alt="#">
                            <div class="insurance-type_title">
-                              <h6>Comprehensive Insurance</h6>
-                              <p>Dynamically repurpose e-business users rather than granular products.</p>
+                              <h6>Belanja menjadi lebih mudah</h6>
+                              <p>Tak perlu berpeluh-peluh untuk pergi berbelanja. Kamu hanya perlu memanggil pasar melalui 
+                                 handphone ataupun laptop anda dari rumah.</p>
                            </div>
                         </div>
                         <div class="insurance-type d-flex align-items-center">
                            <img src="{{ asset('assets/landing/images/tick.png') }}" alt="#">
                            <div class="insurance-type_title">
-                              <h6>Support is just a call away</h6>
-                              <p>Rapidiously customize value-added platforms compliant action items.</p>
+                              <h6>Say goodbye to menunda-nunda pekerjaan.</h6>
+                              <p>Pekerjaan menumpuk dan bikin stress selalu jadi masalah yang sensitif, khususnya buat kaum ibu-ibu.
+                                 Sekarang gak perlu takut lagi buat nunda kerjaan karena harus belanja ke pasar.
+                              </p>
                            </div>
                         </div>
                         <div class="insurance-type d-flex align-items-center">
                            <img src="{{ asset('assets/landing/images/tick.png') }}" alt="#">
                            <div class="insurance-type_title">
-                              <h6>Say goodbye to paperwork.</h6>
-                              <p>Globally deliver economically sound communities relationships.</p>
+                              <h6>Waktu untuk keluarga lebih banyak</h6>
+                              <p>Hal yang paling penting adalah memiliki waktu untuk keluarga. 
+                                 Berlangganan di PEKAN kamu jadi bisa meluangkan waktu lebih banyak untuk keluarga.
                            </div>
                         </div>
                      </div>
@@ -147,8 +149,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="center-title">
-                     <h2>Choose your Insurance</h2>
-                     <p>Keep Your Life Smile, Safe, and Wealthy</p>
+                     <h2>Kemudahan apa yang kamu dapat di PEKAN ?</h2>
                   </div>
                </div>
             </div>
@@ -156,11 +157,10 @@
                <div class="col-md-6 col-lg-4">
                   <div class="item-box">
                      <div class="item-icon color1">
-                        <img src="{{ asset('assets/landing/images/home-insurance.svg') }}" class="img-fluid" alt="#">
+                        <img src="https://mpng.subpng.com/20180325/gww/kisspng-calculator-business-clip-art-calculator-5ab71ec1a89f38.8457428915219504016907.jpg" class="img-fluid" alt="#" style="max-width: 50px">
                      </div>
-                     <h6>Home Insurance</h6>
-                     <p>Insurance can have various effects on society through the way that it changes who bears the
-                        cost of losses and damage.
+                     <h6>Kerugian</h6>
+                     <p>Berjualan di PEKAN akan meringankan kerugian kamu. Jadi tidak perlu takut rugi.
                      </p>
                   </div>
                </div>
@@ -169,53 +169,48 @@
                      <div class="item-icon color2">
                         <img src="{{ asset('assets/landing/images/car-insurance.svg') }}" class="img-fluid" alt="#">
                      </div>
-                     <h6>Car Insurance</h6>
-                     <p>Insurance can have various effects on society through the way that it changes who bears the
-                        cost of losses and damage.
+                     <h6>Hemat</h6>
+                     <p>Bejualan di PEKAN membuat anda hemat dalam membuka lapak. Kamu tidak perlu menyewa tempat untuk berjualan.
                      </p>
                   </div>
                </div>
                <div class="col-md-6 col-lg-4">
                   <div class="item-box">
                      <div class="item-icon color3">
-                        <img src="{{ asset('assets/landing/images/life-insurance.svg') }}" class="img-fluid" alt="#">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRt9YZyNv7l08iFvpT7R8DW_spw4_RE-3eAnzxmVc8kxc4lBtFX&usqp=CAU" class="img-fluid mt-3" alt="#">
                      </div>
-                     <h6>Life Insurance</h6>
-                     <p>Insurance can have various effects on society through the way that it changes who bears the
-                        cost of losses and damage.
+                     <h6>Modal</h6>
+                     <p>Berjualan di PEKAN tidak membutuhkan modal yang besar. Kamu tidak perlu mengeluarkan banyak uang untuk berjualan.
                      </p>
                   </div>
                </div>
                <div class="col-md-6 col-lg-4">
                   <div class="item-box">
                      <div class="item-icon color4">
-                        <img src="{{ asset('assets/landing/images/business-insurance.svg') }}" class="img-fluid" alt="#">
+                        <img src="https://cdn0.iconfinder.com/data/icons/smiley-mom-2/512/mother-04-512.png" class="img-fluid" alt="#">
                      </div>
-                     <h6>Business Insurance</h6>
-                     <p>Insurance can have various effects on society through the way that it changes who bears the
-                        cost of losses and damage.
+                     <h6>Mudah</h6>
+                     <p>Untuk pertama kalinya kamu tidak perlu susah pergi ke pasar. Karena kamu hanya perlu memanggil pasar lewat handphone atau laptop kamu.
                      </p>
                   </div>
                </div>
                <div class="col-md-6 col-lg-4">
                   <div class="item-box">
                      <div class="item-icon color5">
-                        <img src="{{ asset('assets/landing/images/travel-insurance.svg') }}" class="img-fluid" alt="#">
+                        <img src="https://cdn.pixabay.com/photo/2014/04/03/00/38/clock-308937_960_720.png" class="img-fluid" alt="#">
                      </div>
-                     <h6>Travel Insurance</h6>
-                     <p>Insurance can have various effects on society through the way that it changes who bears the
-                        cost of losses and damage.
+                     <h6>Waktu</h6>
+                     <p>Siapa yang tidak mau memiliki waktu luang yang cukup?. Dengan PEKAN waktu luang yang cukup bukan lagi impian semata.
                      </p>
                   </div>
                </div>
                <div class="col-md-6 col-lg-4">
                   <div class="item-box">
                      <div class="item-icon color6">
-                        <img src="{{ asset('assets/landing/images/other-insurance.svg') }}" class="img-fluid" alt="#">
+                        <img src="https://cdn.cooltra.com/uploads/2018/04/Flota-de-motos.png" class="img-fluid" alt="#">
                      </div>
-                     <h6>Other Insurance</h6>
-                     <p>Insurance can have various effects on society through the way that it changes who bears the
-                        cost of losses and damage.
+                     <h6>Transportasi</h6>
+                     <p>Tidak memiliki kendaraan untuk pergi ke pasar?. Tidak perlu lagi cari ojek buat pergi ke pasar.
                      </p>
                   </div>
                </div>
@@ -227,8 +222,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="center-title">
-                     <h2>Simplified Claims</h2>
-                     <p>Easy as One, Two, Three</p>
+                     <h2>Kemudahan Pemakaian PEKAN</h2>
                   </div>
                </div>
             </div>
@@ -238,9 +232,8 @@
                      <div class="item-icon color1">
                         <span>1</span>
                      </div>
-                     <h6>Report Claim</h6>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis nunc vitae velit rutrum
-                        suscipit non et eros.
+                     <h6>Pesan</h6>
+                     <p>Cukup order pasar yang kamu inginkan. Kamu hanya tinggal menunggu.
                      </p>
                   </div>
                </div>
@@ -249,9 +242,8 @@
                      <div class="item-icon color2">
                         <span>2</span>
                      </div>
-                     <h6>Claim Processing</h6>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis nunc vitae velit rutrum
-                        suscipit non et eros.
+                     <h6>Datang</h6>
+                     <p>Penjual cukup menerima pesanan dan langsung datang ke lokasi pembeli.
                      </p>
                   </div>
                </div>
@@ -260,48 +252,9 @@
                      <div class="item-icon color3">
                         <span>3</span>
                      </div>
-                     <h6>Final Settlement</h6>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis nunc vitae velit rutrum
-                        suscipit non et eros.
+                     <h6>Transaksi</h6>
+                     <p>Kamu bisa langsung bertransaksi ditempat yang kamu inginkan.
                      </p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <section class="testimonial">
-         <div class="container">
-            <div class="row d-flex">
-               <div class="col-md-12 col-lg-7 align-items-center">
-                  <div class="testi-content_block">
-                     <img src="{{ asset('assets/landing/images/quote.png" class="img-fluid') }}" alt="#">
-                     <h3>I need to understand what’s going on – it’s my health and I want to feel secure in it. With
-                        my previous health insurance, I didn’t know how any of it worked.
-                     </h3>
-                     <span>Matthew Young</span>
-                     <p>Legal Consultant, United States</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="testi-img_wrap">
-            <img src="{{ asset('assets/landing/images/testi-img.png') }}" class="img-fluid" alt="#" width="650">
-         </div>
-      </section>
-      <section class="add-section clearfix">
-         <div class="container">
-            <div class="row justify-content-center">
-               <div class="col-md-10">
-                  <div class="add-box">
-                     <img src="{{ asset('assets/landing/images/shield-yellow.svg') }}" class="img-fluid shield" alt="#">
-                     <div class="add-content">
-                        <h3> 100% Satisfaction Guarantee</h3>
-                        <p>We offer no questions asked refund policy for 14 days from the policy date.</p>
-                     </div>
-                     <div class="add-btn">
-                        <a href="#" data-toggle="modal" data-target="#contactmodal" class="btn btn-success">Get
-                        your free Quote</a>
-                     </div>
                   </div>
                </div>
             </div>
@@ -312,223 +265,69 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="center-title">
-                     <h2>Honest Pricing</h2>
-                     <p>Simple & honest pricing. No hidden fees. </p>
+                     <h2 id="getStart">Daftar</h2>
                   </div>
                </div>
             </div>
-            <div class="row pricing-wrap">
+            <div class="row pricing-wrap justify-content-center">
                <div class="col-md-4">
                   <div class="row">
                      <div class="pricing-block">
-                        <h6 class="primary">BASIC</h6>
+                        <h6 class="primary">PEMBELI</h6>
                         <div class="pricing-high">
                            <div class="pricing-icon color3">
-                              <h2><span>$</span>9</h2>
+                              <h2><i class="fa fa-user"></i></h2>
                            </div>
                         </div>
                         <div class="pricing-text">
                            <i class="fas fa-check"></i>
-                           <p>Rapidiously strategize value</p>
+                           <p>Mudah untuk mengorder pasar. </p>
                         </div>
                         <div class="pricing-text">
                            <i class="fas fa-check"></i>
-                           <p>Progressively visualize leadership </p>
+                           <p>Pilih pasar yang kamu inginkan.</p>
                         </div>
                         <div class="pricing-text">
                            <i class="fas fa-check"></i>
-                           <p>Equity invested supply chains. </p>
+                           <p>Hemat waktu. </p>
                         </div>
                         <div class="add-btn pricing-btn_wrap">
-                           <a href="#" class="btn btn-success">Choose Plan</a>
+                           <a href="#" class="btn btn-success">JOIN</a>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-md-4">
+               <div class="col-md-4 ml-5">
                   <div class="row">
-                     <div class="pricing-block pricing-block_middle">
-                        <h6 class="secondary">PROFESSIONAL</h6>
-                        <span class="save-price">Save 20%</span>
-                        <div class="star-middle">
-                           <i class="fas fa-star"></i>
-                        </div>
+                     <div class="pricing-block color1">
+                        <h6 class="primary">MITRA</h6>
                         <div class="pricing-high">
-                           <div class="pricing-icon color7">
-                              <h2><span>$</span>19</h2>
+                           <div class="pricing-icon color3">
+                              <h2><i class="fa fa-shopping-cart"></i></h2>
                            </div>
                         </div>
                         <div class="pricing-text">
                            <i class="fas fa-check"></i>
-                           <p>Rapidiously strategize value</p>
+                           <p>Mudah menerima orderan.</p>
                         </div>
                         <div class="pricing-text">
                            <i class="fas fa-check"></i>
-                           <p>Progressively visualize leadership </p>
+                           <p>Pilih lapak yang kamu inginkan. </p>
                         </div>
                         <div class="pricing-text">
                            <i class="fas fa-check"></i>
-                           <p>Equity invested supply chains</p>
-                        </div>
-                        <div class="pricing-text">
-                           <i class="fas fa-check"></i>
-                           <p>Proactively leverage</p>
+                           <p>Hemat modal. </p>
                         </div>
                         <div class="add-btn pricing-btn_wrap">
-                           <a href="#" class="btn btn-warning">Choose Plan</a>
+                           <a href="#" class="btn btn-success">JOIN</a>
                         </div>
                      </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="row">
-                     <div class="pricing-block">
-                        <h6 class="tertiary">PREMIUM</h6>
-                        <div class="pricing-high">
-                           <div class="pricing-icon color1">
-                              <h2><span>$</span>49</h2>
-                           </div>
-                        </div>
-                        <div class="pricing-text">
-                           <i class="fas fa-check"></i>
-                           <p>Rapidiously strategize value</p>
-                        </div>
-                        <div class="pricing-text">
-                           <i class="fas fa-check"></i>
-                           <p>Progressively visualize leadership </p>
-                        </div>
-                        <div class="pricing-text">
-                           <i class="fas fa-check"></i>
-                           <p>Equity invested supply chains. </p>
-                        </div>
-                        <div class="add-btn pricing-btn_wrap">
-                           <a href="#" class="btn btn-primary">Choose Plan</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="pricing-bottom_text">
-                     <p>*Prices shown per month if paid annually</p>
                   </div>
                </div>
             </div>
          </div>
          <div class="pricing-bg">
             <img src="{{ asset('assets/landing/images/bg-image4.png') }}" class="img-fluid" alt="#">
-         </div>
-      </section>
-      <section class="collapse-set">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-10 col-lg-7 offset-md-1">
-                  <div class="accordion" id="accordionExample">
-                     <div class="card">
-                        <div class="card-header" id="headingOne">
-                           <h2 class="mb-0">
-                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              What are the documents required for claiming?
-                              </button>
-                           </h2>
-                        </div>
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                           <p class="card-body">
-                              A pre-authorization form is required in case of cashless claims which are to be
-                              submitted to the TPA. Other documents might also be required and you should have
-                              the knowledge of the required documents.
-                           </p>
-                        </div>
-                     </div>
-                     <div class="card">
-                        <div class="card-header" id="headingTwo">
-                           <h2 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              Which are the network hospitals in your vicinity?
-                              </button>
-                           </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                           <p class="card-body">
-                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                              richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                              brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                              aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                              Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                              sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
-                              beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
-                              of them accusamus labore sustainable VHS.
-                           </p>
-                        </div>
-                     </div>
-                     <div class="card">
-                        <div class="card-header" id="headingThree">
-                           <h2 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              Will I get covered for my pre-existing illnesses?
-                              </button>
-                           </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                           <p class="card-body">
-                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                              richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                              brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                              aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                              Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                              sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
-                              beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
-                              of them accusamus labore sustainable VHS.
-                           </p>
-                        </div>
-                     </div>
-                     <div class="card">
-                        <div class="card-header" id="headingFour">
-                           <h2 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                              Is maternity covered in health insurance policies?
-                              </button>
-                           </h2>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                           <p class="card-body">
-                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                              richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                              brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                              aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                              Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                              sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
-                              beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
-                              of them accusamus labore sustainable VHS.
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <section class="add-section clearfix collapse-wrap">
-         <div class="container">
-            <div class="row justify-content-center">
-               <div class="col-md-10">
-                  <div class="add-box">
-                     <img src="{{ asset('assets/landing/images/shield-green.svg') }}" class="img-fluid shield" alt="#">
-                     <div class="add-content">
-                        <h3> Insurance made easy</h3>
-                        <p>At fincorp, we are commited to provide top-notch services to our customers.</p>
-                     </div>
-                     <div class="add-btn">
-                        <a href="#" data-toggle="modal" data-target="#contactmodal" class="btn btn-success">Get
-                        your free Quote</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="pricing-bg02">
-            <img src="{{ asset('assets/landing/images/family-illustration.svg') }}" width="569" class="img-fluid" alt="#">
          </div>
       </section>
       <div>
@@ -578,7 +377,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="copyright">
-                     <p>Copyright © 2019. Insurance LLC</p>
+                     <p>Copyright © 2020. Pekan</p>
                   </div>
                </div>
             </div>
