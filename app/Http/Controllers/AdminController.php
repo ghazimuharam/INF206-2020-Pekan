@@ -6,11 +6,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\User;
-
+use App\Order;
 class AdminController extends Controller
 {
     public function index(){
-        return view('admin.dashboard');
+        $pembeli = User::where('roles_id','=', '3')->get();
+        $penjuala = User::where('roles_id','=', '2')->where('mitra_status', '=', 'active')->get();
+        $penjuald = User::where('roles_id','=', '2')->where('mitra_status', '=', 'deactive')->get();
+        $order = Order::all();
+        return view('admin.dashboard', ['pembeli' => $pembeli, 'penjuala' => $penjuala, 'penjuald' => $penjuald, 'order' => $order]);
     }
 
     public function showLogin(){
