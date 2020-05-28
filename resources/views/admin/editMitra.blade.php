@@ -82,20 +82,10 @@
                                             @endif
                                         </div>
 
-                                        <div class="form-group">
-                                            <label>Status</label>
-                                            <input type="text" name="mitra_status" class="form-control" value="{{ $users -> mitra_status }}">
-                                            @if($errors->has('mitra_status'))
-                                                <div class="text-danger">
-                                                    {{ $errors->first('mitra_status')}}
-                                                </div>
-                                            @endif
-                                        </div>
-
                                         <div class="text-center d-none d-md-inline"><br><br>
                                             <button type="submit" class="btn btn-primary col-xl-2">CHANGE</button>
                                         </div>
-                                    </form> 
+                                    </form>
                                 </div>
                             </div>
                         </div>

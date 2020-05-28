@@ -32,6 +32,9 @@
                                                 </div>
                                             </div>
                                         </form>
+                                        <div class="d-flex justify-content-end mr-3 col-lg-6">
+                                            <h4>Mitra Active</h4>
+                                        </div>
                                     </div>
                                     <div class="table-responsive">
                                         <table class="table mt-3" id="dataTable">
