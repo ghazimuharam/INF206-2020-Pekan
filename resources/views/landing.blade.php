@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>FinCorp 01 - Finance, marketing & Insurance Landing Page Template</title>
+      <title>PEKAN</title>
       <meta content="FinCorp is a Finance, marketing & Insurance Landing Page Template" name="description">
       <meta content="fincorp, landing, template, clean, minimal, light, dark, finance, marketing, insurance" name="keywords">
       <meta content="FinCorp - Finance, marketing & Insurance Landing Page Template<" property="og:title">
