@@ -47,14 +47,14 @@
                 <li class="nav-item active">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
-                      <span>Mitra Management</span>
+                        <span>Mitra Management</span>
                     </a>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                      <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Mitra Status :</h6>
-                        <a class="collapse-item" href="/admin/mitraManagementActive">Active</a>
-                        <a class="collapse-item" href="/admin/mitraManagementDeactive">Deactive</a>
-                      </div>
+                        <div class="bg-secondary py-2 collapse-inner rounded">
+                            <h5 class="collapse-header" style="color: black;"><b>Mitra Status :</b></h5> 
+                            <a class="collapse-item" href="/admin/mitraManagementActive" style="color: black;"><b>Active</b></a>
+                            <a class="collapse-item" href="/admin/mitraManagementDeactive" style="color: black;"><b>Deactive</b></a>
+                        </div>
                     </div>
                 </li>
 
