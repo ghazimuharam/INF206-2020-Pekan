@@ -96,7 +96,7 @@ class AdminController extends Controller
         return view('admin.editUser', ['users'=>$users]);
     }
 
-    public function userEditt(Request $request){
+    public function postEdit(Request $request){
         User::where('roles_id','=','3')->where('id', $request->id)->update([
             'name'=>$request->name,
             'phone'=>$request->phone,
