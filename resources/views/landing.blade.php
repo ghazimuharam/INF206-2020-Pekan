@@ -266,7 +266,7 @@
                   </div>
                </div>
             </div>
-            <div class="row pricing-wrap justify-content-center">
+            <div class="row pricing-wrap justify-content-center mt-5">
                <div class="col-md-4">
                   <div class="row">
                      <div class="pricing-block">
@@ -294,7 +294,8 @@
                      </div>
                   </div>
                </div>
-               <div class="col-md-4 ml-5">
+               <div class="col-md-1"></div>
+               <div class="col-md-4">
                   <div class="row">
                      <div class="pricing-block color1">
                         <h6 class="primary">MITRA</h6>

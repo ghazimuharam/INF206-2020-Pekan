@@ -47,6 +47,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-success mb-3">Update Perubahan</button>
+                <a href="{{ route('pembeliprofile') }}" class="btn btn-danger mb-3">Kembali</a>
             </form>
 		</div>
 	</div>
