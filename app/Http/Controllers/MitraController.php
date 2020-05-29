@@ -87,6 +87,10 @@ class MitraController extends Controller
         return view('mitra.order');
     }
 
+    public function acceptOrder(){
+
+    }
+
     public function destroy()
     {
         Auth::guard('mitra')->logout();

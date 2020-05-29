@@ -32,7 +32,7 @@ class AdminController extends Controller
             'password' => 'required',
         ]);
 
-        if(Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])){
+        if(Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password, 'roles_id' => 1])){
             return redirect(route('adminhome'));
         }else{
             return redirect(route('adminlogin'))->with('info', 'Email password salah.')->withInput();
