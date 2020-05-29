@@ -6,7 +6,7 @@
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">
-            <form action="" method="POST">
+            <form action="{{ route('notifikasi') }}" method="POST">
                 @csrf
                 @foreach ($orders as $order)
                     <h5>{{ $order->created_at->diffForHumans() }} :</h5>
