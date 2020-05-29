@@ -33,8 +33,8 @@
                 <input class="form-control form-control-lg" type="text" name="vehicle_name" placeholder="Merk Kendaraan" style="border-radius: 50px" value="{{ old('vehicle_name') }}">
             </div>
     </div>
-    <div class="col-lg-3">
-        <label>&nbsp;</label>
+    <div class="col-lg-3 mt-2">
+        <label></label>
         <div class="form-group mt-2">
             <input class="form-control form-control-lg" type="text" name="vrn" placeholder="No Plat" style="border-radius: 50px" value="{{ old('vrn') }}">
         </div>
@@ -44,29 +44,29 @@
         <div class="form-group">
             <input class="form-control form-control-lg" type="password" name="password" placeholder="Password" style="border-radius: 50px">
         </div>
+        <div class="row justify-content-center mt-3">
+                <button type="submit" class="btn btn-dark my-5">SUBMIT</button>
+            </form>
+        </div>
     </div>
-    <div class="col-lg-4">
-    @if ($errors->any())
-        <div class="row">
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
+    <div class="col-lg-4 justify-content-center mb-4">
+        @if ($errors->any())
+            <div class="row">
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
-        </div>
-    @endif
-    @if(session('info'))
-        <div class="row">
-            <div class="text-danger">{{ session('info') }}</div>
-        </div>
-    @endif
+        @endif
+        @if(session('info'))
+            <div class="row">
+                <div class="text-danger">{{ session('info') }}</div>
+            </div>
+        @endif
     </div>
-</div>
-<div class="row justify-content-center">
-        <button type="submit" class="btn btn-dark my-4">SUBMIT</button>
-    </form>
 </div>
 
 @endsection

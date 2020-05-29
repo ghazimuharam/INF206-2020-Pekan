@@ -31,15 +31,15 @@
             <div class="form-group mt-2">
                 <input class="form-control form-control-lg" type="password" name="password" placeholder="Password" style="border-radius: 50px">
             </div>
-            <div class="row justify-content">
+            <div class="row justify-content ml-3">
                 <button type="submit" class="btn btn-dark my-2">SUBMIT</button>
             </div>
-            <div class="row justify-content my-1">
+            <div class="row justify-content mt-1 mb-3 ml-3">
                 <a>Sudah Punya Akun Login?<a href="{{ route('pembelilogin') }}">Disini</a></a>
             </div>
         <form>
-    </div>  
-    <div class="col-lg-4">
+    </div>
+    <div class="col-lg-4 ml-3 mb-3">
         @if ($errors->any())
             <div class="row">
                 <div class="alert alert-danger">

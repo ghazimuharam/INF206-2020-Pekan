@@ -114,7 +114,7 @@
                            <img src="{{ asset('assets/landing/images/tick.png') }}" alt="#">
                            <div class="insurance-type_title">
                               <h6>Belanja menjadi lebih mudah</h6>
-                              <p>Tak perlu berpeluh-peluh untuk pergi berbelanja. Kamu hanya perlu memanggil pasar melalui 
+                              <p>Tak perlu berpeluh-peluh untuk pergi berbelanja. Kamu hanya perlu memanggil pasar melalui
                                  handphone ataupun laptop anda dari rumah.</p>
                            </div>
                         </div>
@@ -131,7 +131,7 @@
                            <img src="{{ asset('assets/landing/images/tick.png') }}" alt="#">
                            <div class="insurance-type_title">
                               <h6>Waktu untuk keluarga lebih banyak</h6>
-                              <p>Hal yang paling penting adalah memiliki waktu untuk keluarga. 
+                              <p>Hal yang paling penting adalah memiliki waktu untuk keluarga.
                                  Berlangganan di PEKAN kamu jadi bisa meluangkan waktu lebih banyak untuk keluarga.
                            </div>
                         </div>
@@ -269,7 +269,7 @@
                   </div>
                </div>
             </div>
-            <div class="row pricing-wrap justify-content-center">
+            <div class="row pricing-wrap justify-content-center mt-5">
                <div class="col-md-4">
                   <div class="row">
                      <div class="pricing-block">
@@ -297,7 +297,8 @@
                      </div>
                   </div>
                </div>
-               <div class="col-md-4 ml-5">
+               <div class="col-md-1"></div>
+               <div class="col-md-4">
                   <div class="row">
                      <div class="pricing-block color1">
                         <h6 class="primary">MITRA</h6>

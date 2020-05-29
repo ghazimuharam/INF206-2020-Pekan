@@ -60,10 +60,11 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-success">Update Perubahan</button>
-                <a href="{{ route('mitraprofile') }}" class="btn btn-danger mb-2">Kembali</a>
+                <button type="submit" class="btn btn-success mt-3">Update Perubahan</button>
+                <a href="{{ route('mitraprofile') }}" class="btn btn-danger mt-3">Kembali</a>
             </form>
 		</div>
 	</div>
 </div>
+<div class="mb-5"></div>
 @endsection

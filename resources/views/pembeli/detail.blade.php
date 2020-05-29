@@ -5,7 +5,7 @@
 @section('content')
 
 <h3 class="text-center mt-4"  >Order Detail</h3>
-<div class="col d-flex justify-content-center">
+<div class="col d-flex justify-content-center mb-4">
     <div class="card" style="max-width: 30rem; border-radius: 30px">
         <div class="card-body" >
             <h5 class="card-title">No Pesanan :</h5>

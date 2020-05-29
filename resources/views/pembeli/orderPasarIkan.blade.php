@@ -8,7 +8,7 @@
     <img src="https://marvel-live.freetls.fastly.net/canvas/2020/2/5622ea6e4182426ab33f86c301fa7581?quality=95&fake=.png" alt="ikan" width="8%" height="8%">
 </div>
 
-<div class="row justify-content-center mt-1">
+<div class="row justify-content-center mt-1 mx-3">
     <div class="col-sm-2 text-center">
         <div class="row justify-content-center mt-2">
             <a href="{{ route('pembeliorderdetails', ['name' => 'ikan', 'id' => $users[0]->id]) }}" style="text-decoration: none;">
@@ -23,7 +23,8 @@
             </a>
         </div>
     </div>
-    <div class="col-sm-2 text-center mx-3">
+    <div class="mx-2"></div>
+    <div class="col-sm-2 text-center">
         <div class="row justify-content-center mt-2">
             <a href="{{ route('pembeliorderdetails', ['name' => 'ikan', 'id' => $users[1]->id]) }}" style="text-decoration: none;">
                 <div class="card" style="border-radius: 30px">
@@ -39,7 +40,7 @@
     </div>
 </div>
 
-<div class="row justify-content-center my-2">
+<div class="row justify-content-center my-2 mx-3">
     <div class="col-sm-2 text-center">
         <div class="row justify-content-center mt-2">
             <a href="{{ route('pembeliorderdetails', ['name' => 'ikan', 'id' => $users[2]->id]) }}" style="text-decoration: none;">
@@ -54,7 +55,8 @@
             </a>
         </div>
     </div>
-    <div class="col-sm-2 text-center mx-3">
+    <div class="mx-2"></div>
+    <div class="col-sm-2 text-center mb-5">
         <div class="row justify-content-center mt-2">
             <a href="{{ route('pembeliorderdetails', ['name' => 'ikan', 'id' => $users[3]->id]) }}" style="text-decoration: none;">
                 <div class="card" style="border-radius: 30px">
