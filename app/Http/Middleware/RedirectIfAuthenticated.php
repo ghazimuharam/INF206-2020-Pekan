@@ -19,11 +19,11 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard('admin')->check()) {
-            return redirect(route('mitraprofile'));
+            return redirect(route('adminhome'));
         }else if (Auth::guard('mitra')->check()) {
-            return redirect(route('mitraprofile'));
+            return redirect(route('mitrahome'));
         }else if (Auth::check()) {
-            return redirect(route('mitraprofile'));
+            return redirect(route('pembelihome'));
         }
 
         return $next($request);
