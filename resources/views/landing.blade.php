@@ -340,46 +340,9 @@
          </div>
       </div>
       <footer>
-         <div class="container">
-            <div class="row">
-               <div class="col-md-4">
-                  <div class="footer-title">
-                     <h6>ADDRESS</h6>
-                     <p>400-401 West Georgia Street<br>
-                        Vancouver, BC, Canada, V6B 5A1<br>
-                        +1 (123) 456 7890<br>
-                        <a href="https://demo.web3canvas.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b8cbd9d4ddcbf8d1d6cbcdcad9d6dbdd96dbd7d5">[email&#160;protected]</a>
-                     </p>
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <div class="footer-title">
-                     <h6>FOLLOW US</h6>
-                     <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">Instagram</a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-md-5">
-                  <div class="footer-title">
-                     <h6>FOLLOW US</h6>
-                     <p>Compellingly myocardinate market-driven infrastructures before team driven manufactured
-                        products. Monotonectally exploit tactical markets vis-a-vis excellent deliverables.
-                     </p>
-                  </div>
-               </div>
+            <div class="row justify-content-center">
+                <p>Copyright © 2020. Pekan</p>
             </div>
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="copyright">
-                     <p>Copyright © 2020. Pekan</p>
-                  </div>
-               </div>
-            </div>
-         </div>
       </footer>
       <script data-cfasync="false" src="https://demo.web3canvas.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{{ asset('assets/landing/js/jquery-3.4.1.min.js') }}"></script>
       <script src="{{ asset('assets/landing/js/popper.min.js') }}"></script>
