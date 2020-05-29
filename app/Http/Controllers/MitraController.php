@@ -84,11 +84,22 @@ class MitraController extends Controller
     }
 
     public function showOrder(){
-        return view('mitra.order');
+        $orders = Auth::guard('mitra')->user()->sellerOrderHistory->where('status_order', '=', 'created')->take(1);
+        return view('mitra.order', ['orders' => $orders]);
     }
 
-    public function acceptOrder(){
+    public function acceptOrder(Request $request){
+        $request->validate([
+            'OrderId' => 'required',
+        ]);
 
+        $order = Order::findOrFail($request->OrderId)->update(['status_order' => 'accepted']);
+        return redirect(route('orderdetails'));
+    }
+
+    public function orderDetails(){
+        $order = Auth::guard('mitra')->user()->sellerOrderHistory->where('status_order', '=', 'accepted')->take(1);
+        return view('mitra.notifikasi', ['orders' => $order]);
     }
 
     public function destroy()

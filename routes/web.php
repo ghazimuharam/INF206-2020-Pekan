@@ -34,8 +34,9 @@ Route::group(['middleware' => 'guest'], function () {
 
 Route::get('/mitra/marketoptions', 'MitraController@marketOptions')->name('mitrahome');
 Route::get('/mitra/logout', 'MitraController@destroy')->name('mitralogout');
-Route::get('/mitra/order', 'MitraController@showOrder')->name('notifikasi');
+Route::get('/mitra/notifikasi', 'MitraController@showOrder')->name('notifikasi');
 Route::post('/mitra/notifikasi', 'MitraController@acceptOrder')->name('notifikasi');
+Route::get('/mitra/order/detail', 'MitraController@orderDetails')->name('orderdetails');
 Route::get('/mitra/stock/vegetable', 'MitraController@displayStokSayur');
 Route::post('/mitra/stock/vegetable', 'MitraController@updateStokSayur');
 Route::get('/mitra/stock/{id}/delete', 'MitraController@destroyStok');
