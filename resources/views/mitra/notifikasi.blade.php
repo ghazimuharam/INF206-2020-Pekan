@@ -4,10 +4,10 @@
 
 @section('content')
 
-<h3 class="text-center">Pemesan Detail</h3>
-<div class="col d-flex justify-content-center">
+<h3 class="text-center mt-5">Pemesan Detail</h3>
+<div class="col d-flex justify-content-center mb-5">
     <div class="card text-white bg-info mb-3" style="max-width: 30rem; border-radius: 30px">
-        <div class="card-body" >
+        <div class="card-body">
             @foreach ($orders as $order)
                 <h5 class="card-title">No Pemesanan : {{ $order-> id }}</h5>
                 <div class="row justify-content-center mt-3">
@@ -16,6 +16,7 @@
                 <p class="text-center">{{ $order->checkUser->name }}</p>
                 <p class="text-center">{{ $order->checkUser->phone }}</p>
             @endforeach
+        </div>
     </div>
 </div>
 
