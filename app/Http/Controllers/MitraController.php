@@ -15,7 +15,7 @@ class MitraController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('mitra', ['only' => ['index', 'marketOptions', 'destroy', 'showOrder', 'push', 'pushpost']]);
+        $this->middleware('mitra')->except(['showLogin', 'doLogin', 'create', 'store']);
     }
 
     public function index()

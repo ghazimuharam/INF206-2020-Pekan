@@ -22,6 +22,14 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/mitra/login', 'MitraController@doLogin')->name('mitralogin');
     Route::get('/mitra/register', 'MitraController@create')->name('mitraregis');
     Route::post('/mitra/register', 'MitraController@store')->name('mitraregis');
+
+    Route::get('/pembeli/login', 'UserController@showLogin')->name('pembelilogin');
+    Route::post('/pembeli/login','UserController@doLogin')->name('pembelilogin');
+    Route::get('/pembeli/register', 'UserController@showRegister')->name('pembeliregis');
+    Route::post('/pembeli/register','UserController@doRegister')->name('pembeliregis');
+
+    Route::get('/admin/login', 'AdminController@showLogin')->name('adminlogin');
+    Route::post('/admin/login', 'AdminController@doLogin')->name('adminlogin');
 });
 
 Route::get('/mitra/marketoptions', 'MitraController@marketOptions')->name('mitrahome');
@@ -41,11 +49,7 @@ Route::get('/mitra/history', 'MitraController@historyOrder')->name('mitrahistory
 Route::get('/mitra/ubahpassword', 'MitraController@ubahPassw')->name('mitraubahpw');
 Route::post('/mitra/ubahpassword', 'MitraController@updatePassw')->name('mitraubahpw');
 
-Route::get('/pembeli/login', 'UserController@showLogin')->name('pembelilogin');
-Route::post('/pembeli/login','UserController@doLogin')->name('pembelilogin');
 Route::get('/pembeli/logout','UserController@destroy')->name('pembelilogout');
-Route::get('/pembeli/register', 'UserController@showRegister')->name('pembeliregis');
-Route::post('/pembeli/register','UserController@doRegister')->name('pembeliregis');
 Route::get('/pembeli/profile','UserController@showProfile')->name('pembeliprofile');
 Route::post('/pembeli/profile', 'UserController@updateProfile')->name('pembeliprofile');
 Route::get('/pembeli/history','UserController@historyUser')->name('pembelihistory');
@@ -64,12 +68,9 @@ Route::get('/user/order/push','MitraController@push')->name('push');
 Route::post('/user/order/push','MitraController@pushpost');
 Route::get('/test', 'TestController@index');
 
-Route::get('/admin/login', 'AdminController@showLogin')->name('adminlogin');
-Route::post('/admin/login', 'AdminController@doLogin')->name('adminlogin');
 Route::get('/admin/dashboard', 'AdminController@index')->name('adminhome');
 Route::get('/admin/logout', 'AdminController@destroy')->name('adminlogout');
 Route::get('/admin/userManagement', 'AdminController@userManagement')->name('adminusermanagement');
-Route::get('/admin/deleteUser/{id}', 'AdminController@userDelete')->name('admindeleteuser');
 Route::get('/admin/mitraManagementActive', 'AdminController@mitraManagementA')->name('adminmitramanagement');
 Route::get('/admin/mitraManagementDeactive', 'AdminController@mitraManagementD')->name('adminmitramanagementdeactive');
 Route::get('/admin/deleteMitra/{id}', 'AdminController@mitraDelete')->name('admindeletemitra');
@@ -77,6 +78,7 @@ Route::get('/admin/mitraSearch', 'AdminController@mitraSearch')->name('adminmitr
 Route::get('/admin/changeMitra/{id}', 'AdminController@mitraEdit')->name('mitraedit');
 Route::post('/admin/changeMitra/{id}', 'AdminController@mitraEditt')->name('mitraedit');
 Route::get('/admin/mitraActive/{id}', 'AdminController@mitraActive')->name('mitraactive');
+Route::get('/admin/deleteUser/{id}', 'AdminController@userDelete')->name('admindeleteuser');
 Route::get('/admin/userSearch', 'AdminController@userSearch')->name('adminusersearch');
 Route::get('/admin/changeUser/{id}', 'AdminController@userEdit')->name('useredit');
 Route::post('/admin/changeUser/{id}', 'AdminController@postEdit')->name('useredit');

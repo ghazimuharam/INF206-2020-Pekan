@@ -9,6 +9,11 @@ use App\User;
 use App\Order;
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin')->except(['showLogin', 'doLogin']);
+    }
+
     public function index(){
         $pembeli = User::where('roles_id','=', '3')->get();
         $penjuala = User::where('roles_id','=', '2')->where('mitra_status', '=', 'active')->get();

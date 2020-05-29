@@ -4,9 +4,6 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>PEKAN</title>
-      <meta content="FinCorp is a Finance, marketing & Insurance Landing Page Template" name="description">
-      <meta content="fincorp, landing, template, clean, minimal, light, dark, finance, marketing, insurance" name="keywords">
-      <meta content="FinCorp - Finance, marketing & Insurance Landing Page Template<" property="og:title">
       <meta content="website" property="og:type">
       <script src="https://demo.web3canvas.com/cdn-cgi/apps/head/-mEFVS8y7qx5pVzWHQTCQu5gnVM.js"></script>
       <link rel="stylesheet" href="{{ asset('assets/landing/css/bootstrap.min.css') }}">
@@ -27,11 +24,11 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                            <ul class="navbar-nav mr-auto">
-                              <li class="nav-item active">
-                                 <a class="nav-link" href="#">For you & family <span class="sr-only">(current)</span></a>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="{{ route('pembelilogin') }}" tabindex="-1" aria-disabled="true">Login Pembeli</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">ForBusiness</a>
+                                 <a class="nav-link" href="{{ route('mitralogin') }}" tabindex="-1" aria-disabled="true">Login Mitra</a>
                               </li>
                            </ul>
                         </div>
@@ -47,11 +44,11 @@
                   <div class="row">
                      <div class="col-md-6 col-lg-5">
                         <div class="hero-title">
-                           <p>Hello, We are PEKAN</p>
+                           <p>Hello from PEKAN</p>
                            <h2>PEKAN made your life easier!</h2>
                            <h5>Apakah Anda Siap untuk Kehidupan yang lebih mudah?
-                              Langsung saja berlangganan di PEKAN</h5>
-                           <a href="#getStart" class="btn btn-danger">Getting Started</a>
+                              Ayo bergabung dengan PEKAN</h5>
+                           <a href="#getStart" class="btn btn-danger">BERGABUNG SEKARANG</a>
                         </div>
                      </div>
                   </div>
@@ -114,7 +111,7 @@
                            <img src="{{ asset('assets/landing/images/tick.png') }}" alt="#">
                            <div class="insurance-type_title">
                               <h6>Belanja menjadi lebih mudah</h6>
-                              <p>Tak perlu berpeluh-peluh untuk pergi berbelanja. Kamu hanya perlu memanggil pasar melalui 
+                              <p>Tak perlu berpeluh-peluh untuk pergi berbelanja. Kamu hanya perlu memanggil pasar melalui
                                  handphone ataupun laptop anda dari rumah.</p>
                            </div>
                         </div>
@@ -131,7 +128,7 @@
                            <img src="{{ asset('assets/landing/images/tick.png') }}" alt="#">
                            <div class="insurance-type_title">
                               <h6>Waktu untuk keluarga lebih banyak</h6>
-                              <p>Hal yang paling penting adalah memiliki waktu untuk keluarga. 
+                              <p>Hal yang paling penting adalah memiliki waktu untuk keluarga.
                                  Berlangganan di PEKAN kamu jadi bisa meluangkan waktu lebih banyak untuk keluarga.
                            </div>
                         </div>
@@ -292,7 +289,7 @@
                            <p>Hemat waktu. </p>
                         </div>
                         <div class="add-btn pricing-btn_wrap">
-                           <a href="#" class="btn btn-success">JOIN</a>
+                           <a href="{{ route('pembeliregis') }}" class="btn btn-success">JOIN</a>
                         </div>
                      </div>
                   </div>
@@ -319,7 +316,7 @@
                            <p>Hemat modal. </p>
                         </div>
                         <div class="add-btn pricing-btn_wrap">
-                           <a href="#" class="btn btn-success">JOIN</a>
+                           <a href="{{ route('mitraregis') }}" class="btn btn-success">JOIN</a>
                         </div>
                      </div>
                   </div>
