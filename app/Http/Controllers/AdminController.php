@@ -88,7 +88,7 @@ class AdminController extends Controller
     public function mitraSearch(Request $request){
         $cari = $request->cari;
         $request = User::where('roles_id','=','2')->where('name', 'like', "%".$cari."%")->paginate();
-        return view('admin.mitraManagement', ['users'=>$request]);
+        return view('admin.mitraManagementA', ['users'=>$request]);
     }
 
     public function userEdit($id){
