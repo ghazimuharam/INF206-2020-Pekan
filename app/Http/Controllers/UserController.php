@@ -9,6 +9,11 @@ use App\User;
 use App\Order;
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('pembeli')->except(['showLogin', 'doLogin', 'showRegister', 'doRegister']);
+    }
+
     public function index()
     {
         $user = Auth::user();

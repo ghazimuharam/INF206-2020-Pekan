@@ -4,9 +4,6 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>PEKAN</title>
-      <meta content="FinCorp is a Finance, marketing & Insurance Landing Page Template" name="description">
-      <meta content="fincorp, landing, template, clean, minimal, light, dark, finance, marketing, insurance" name="keywords">
-      <meta content="FinCorp - Finance, marketing & Insurance Landing Page Template<" property="og:title">
       <meta content="website" property="og:type">
       <script src="https://demo.web3canvas.com/cdn-cgi/apps/head/-mEFVS8y7qx5pVzWHQTCQu5gnVM.js"></script>
       <link rel="stylesheet" href="{{ asset('assets/landing/css/bootstrap.min.css') }}">
@@ -47,11 +44,11 @@
                   <div class="row">
                      <div class="col-md-6 col-lg-5">
                         <div class="hero-title">
-                           <p>Hello, We are PEKAN</p>
+                           <p>Hello from PEKAN</p>
                            <h2>PEKAN made your life easier!</h2>
                            <h5>Apakah Anda Siap untuk Kehidupan yang lebih mudah?
-                              Langsung saja berlangganan di PEKAN</h5>
-                           <a href="#getStart" class="btn btn-danger">Getting Started</a>
+                              Ayo bergabung dengan PEKAN</h5>
+                           <a href="#getStart" class="btn btn-danger">BERGABUNG SEKARANG</a>
                         </div>
                      </div>
                   </div>
